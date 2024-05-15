@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Form.css';
+import './FormTelaPrincipal.css';
 
 const Form = () => {
   // Estados para armazenar as entradas do usuário
