@@ -1,18 +1,23 @@
+form {
+  margin-bottom: 1rem;
+}
+
 .input-field input {
-  width: 25vw;
-  height: 10vh;
+  width: 21.5vw;
+  height: 7.5vh;
   border-radius: 1.125rem;
   border: none;
-  font-size: 20px;
-  padding-left: 10px;
-  margin-top: 50px;
+  font-size: 1.25rem;
+  padding: 0 1.5rem;
+  margin-top: 2rem;
   outline: none;
 }
 .input-field select {
-  width: 25vw;
-  height: 5vh;
+  width: 22.5vw;
+  height: 7vh;
   margin: 2rem 0;
   border-radius: 0.5rem;
   font-size: 1rem;
   outline: none;
+  padding: 0.5rem;
 }
