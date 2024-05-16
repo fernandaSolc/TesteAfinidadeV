@@ -1,5 +1,5 @@
 import Card from '../../components/Card/Card';
-import Form from '../../components/Form/Form';
+import FormTelaPrincipal from '../../components/FormTelaPrincipal/FormTelaPrincipal';
 import Title from '../../components/Title/Title';
 import Logo from '../../components/Logo/Logo';
 import './TelaPrincipal.css';
@@ -10,7 +10,7 @@ const TelaPrincipal = () => {
       <Title />
       <Card>
         <Logo />
-        <Form />
+        <FormTelaPrincipal />
         <button>Iniciar Quiz</button>
       </Card>
     </div>
