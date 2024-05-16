@@ -11,8 +11,8 @@
 }
 
 button {
-  width: 17vw;
-  height: 10vh;
+  width: 15vw;
+  height: 9vh;
   font-weight: 600;
   font-size: 1.5rem;
   cursor: pointer;
@@ -21,6 +21,7 @@ button {
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 button:hover {
