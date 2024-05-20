@@ -8,6 +8,8 @@ const TelaPerguntas = () => {
       <CardTelaPerguntas>
         <TitleTelaPerguntas />
         <CardRespostas />
+        <button className='btnAnterior'>Anterior</button>
+        <button className='btnProxima'>Próxima</button>
       </CardTelaPerguntas>
     </>
   );
