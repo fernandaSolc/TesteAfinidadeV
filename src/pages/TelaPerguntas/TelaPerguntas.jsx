@@ -1,12 +1,17 @@
+import CardRespostas from '../../components/CardRespostas/CardRespostas';
 import CardTelaPerguntas from '../../components/CardTelaPerguntas/CardTelaPerguntas';
 import LogoTelaPerguntas from '../../components/LogoTelaPerguntas/LogoTelaPerguntas';
+import TitleTelaPerguntas from '../../components/TitleTelaPerguntas/TitleTelaPerguntas';
 
 const TelaPerguntas = () => {
   return (
-    <div>
+    <>
       <LogoTelaPerguntas />
-      <CardTelaPerguntas />
-    </div>
+      <CardTelaPerguntas>
+        <TitleTelaPerguntas />
+        <CardRespostas />
+      </CardTelaPerguntas>
+    </>
   );
 };
 
