@@ -6,11 +6,11 @@ import LogoTelaPerguntas from './components/LogoTelaPerguntas/LogoTelaPerguntas'
 function App() {
   return (
     <>
-    <header>{LogoTelaPerguntas()}</header>
-    <div className='container'>
-      {/* <TelaPrincipal /> */}
-      <TelaPerguntas />
-    </div>
+      <header>{LogoTelaPerguntas()}</header>
+      <div className='container'>
+        {/* <TelaPrincipal /> */}
+        <TelaPerguntas />
+      </div>
     </>
   );
 }
