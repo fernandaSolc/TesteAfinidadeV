@@ -13,10 +13,16 @@ const TelaPrincipal = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://api-hml.pdcloud.dev/enrolled/matricula/:PDX', { name, pdx, turno });
+      const response = await axios.post(
+        'http://api-hml.pdcloud.dev/enrolled/matricula/:PDX',
+        { name, pdx, turno }
+      );
       console.log('Resposta do servidor:', response.data);
     } catch (error) {
-      console.error('Erro ao enviar dados:', error.response ? error.response.data : error.message);
+      console.error(
+        'Erro ao enviar dados:',
+        error.response ? error.response.data : error.message
+      );
     }
   };
 
@@ -25,13 +31,13 @@ const TelaPrincipal = () => {
       <Title />
       <Card>
         <Logo />
-        <FormTelaPrincipal 
-          name={name} 
-          setName={setName} 
-          pdx={pdx} 
-          setPdx={setPdx} 
-          turno={turno} 
-          setTurno={setTurno} 
+        <FormTelaPrincipal
+          name={name}
+          setName={setName}
+          pdx={pdx}
+          setPdx={setPdx}
+          turno={turno}
+          setTurno={setTurno}
         />
         <button onClick={handleSubmit}>Iniciar Quiz</button>
       </Card>
