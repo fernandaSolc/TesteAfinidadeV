@@ -12,21 +12,17 @@ const CardRespostas = () => {
   return (
     <div>
       <form>
-        <div className='cardRespostas'>
-          <CircularButton onClick={() => handleSelect('HTML')} clicked={selected === 'HTML'} />
-          <label onClick={() => handleSelect('HTML')}>HTML</label>
+      <div className={`cardRespostas ${selected === 'P1' ? 'selected' : ''}`} onClick={() => handleSelect('P1')}>
+          <CircularButton clicked={selected === 'P1'} />
+          <label>HTML</label>
         </div>
-        <div className='cardRespostas'>
-          <CircularButton onClick={() => handleSelect('CSS')} clicked={selected === 'CSS'} />
-          <label onClick={() => handleSelect('CSS')}>CSS</label>
+        <div className={`cardRespostas ${selected === 'P2' ? 'selected' : ''}`} onClick={() => handleSelect('P2')}>
+          <CircularButton clicked={selected === 'P2'} />
+          <label>CSS</label>
         </div>
-        <div className='cardRespostas'>
-          <CircularButton onClick={() => handleSelect('pipi')} clicked={selected === 'pipi'} />
-          <label onClick={() => handleSelect('JavaScript')}>pipi</label>
-        </div>
-        <div className='cardRespostas'>
-          <CircularButton onClick={() => handleSelect('JavaScript')} clicked={selected === 'JavaScript'} />
-          <label onClick={() => handleSelect('JavaScript')}>JavaScript</label>
+        <div className={`cardRespostas ${selected === 'P3' ? 'selected' : ''}`} onClick={() => handleSelect('P3')}>
+          <CircularButton clicked={selected === 'P3'} />
+          <label>JavaScript</label>
         </div>
       </form>
     </div>

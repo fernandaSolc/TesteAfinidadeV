@@ -1,8 +1,8 @@
 .circle-button {
-  width: 10px;
-  height: 10px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 2px solid #B572B4;
+  border: 1px solid #B572B4;
   background-color: transparent;
   color: #B572B4;
   font-weight: bold;
