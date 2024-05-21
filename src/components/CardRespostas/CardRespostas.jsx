@@ -1,41 +1,35 @@
+import { useState } from 'react';
 import './CardRespostas.css';
+import CircularButton from '../botaoResposta/botaoResposta';
 
 const CardRespostas = () => {
+  const [selected, setSelected] = useState('');
+
+  const handleSelect = (value) => {
+    setSelected(value);
+  };
+
   return (
-<<<<<<< HEAD
-   
-=======
     <div>
       <form>
         <div className='cardRespostas'>
-          <input type='radio' id='html' name='fav_language' value='HTML' />
-          <label htmlFor='html'>HTML</label>
+          <CircularButton onClick={() => handleSelect('HTML')} clicked={selected === 'HTML'} />
+          <label onClick={() => handleSelect('HTML')}>HTML</label>
         </div>
         <div className='cardRespostas'>
-          <input type='radio' id='css' name='fav_language' value='CSS' />
-          <label htmlFor='css'>CSS</label>
+          <CircularButton onClick={() => handleSelect('CSS')} clicked={selected === 'CSS'} />
+          <label onClick={() => handleSelect('CSS')}>CSS</label>
         </div>
         <div className='cardRespostas'>
-          <input
-            type='radio'
-            id='javascript'
-            name='fav_language'
-            value='JavaScript'
-          />
-          <label htmlFor='javascript'>JavaScript</label>
+          <CircularButton onClick={() => handleSelect('pipi')} clicked={selected === 'pipi'} />
+          <label onClick={() => handleSelect('JavaScript')}>pipi</label>
         </div>
         <div className='cardRespostas'>
-          <input
-            type='radio'
-            id='javascript'
-            name='fav_language'
-            value='JavaScript'
-          />
-          <label htmlFor='javascript'>JavaScript</label>
+          <CircularButton onClick={() => handleSelect('JavaScript')} clicked={selected === 'JavaScript'} />
+          <label onClick={() => handleSelect('JavaScript')}>JavaScript</label>
         </div>
       </form>
     </div>
->>>>>>> origin/Gustavo
   );
 };
 
