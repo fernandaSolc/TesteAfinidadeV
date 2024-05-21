@@ -1,9 +1,30 @@
 .cardRespostas {
-  display: flex;
-  flex-direction: row;
-  width: 350px;
+  width: 450px;
   height: 50px;
   margin-bottom: 15px;
+  padding-left: 10px;
+  background-color: #F8EEFF;
   border: 2px solid purple;
+  border: none;
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cardRespostas:hover {
+  background-color: #f0e0ff;
+}
+.cardRespostas.selected {
+  background-color: #E1C6F6;
+}
+
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  accent-color: #c897c9;
+}
+
+label {
+  padding-left: 5px;
 }
