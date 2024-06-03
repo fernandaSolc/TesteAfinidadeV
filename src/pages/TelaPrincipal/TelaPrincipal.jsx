@@ -3,15 +3,12 @@ import FormTelaPrincipal from '../../components/FormTelaPrincipal/FormTelaPrinci
 import './TelaPrincipal.css';
 
 const TelaPrincipal = () => {
-  const [name, setName] = useState('');
   const [pdx, setPdx] = useState('');
   const [turno, setTurno] = useState('');
 
   return (
-    <div className="telaPrincipal">
+    <div className='telaPrincipal'>
       <FormTelaPrincipal
-        name={name}
-        setName={setName}
         pdx={pdx}
         setPdx={setPdx}
         turno={turno}
