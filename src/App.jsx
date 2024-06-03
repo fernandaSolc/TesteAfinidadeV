@@ -1,17 +1,16 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TelaPerguntas from './pages/TelaPerguntas/TelaPerguntas';
-import LogoTelaPerguntas from './components/LogoTelaPerguntas/LogoTelaPerguntas';
-// import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
+import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
 
 function App() {
-  return (
-    <>
-      <header>{LogoTelaPerguntas()}</header>
-      <div className='container'>
-        {/* <TelaPrincipal /> */}
-        <TelaPerguntas />
-      </div>
-    </>
+      return (
+  <Router>
+      <Routes>
+        <Route path="/" element={<TelaPrincipal />} />
+        <Route path="/quiz" element={<TelaPerguntas />} />
+      </Routes>
+    </Router>
   );
 }
 
