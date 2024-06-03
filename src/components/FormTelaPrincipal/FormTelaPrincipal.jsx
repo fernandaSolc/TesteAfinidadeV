@@ -1,8 +1,7 @@
-
 import { useNavigate } from 'react-router-dom';
 import './FormTelaPrincipal.css';
 
-const FormTelaPrincipal = ({ name, setName, pdx, setPdx, turno, setTurno }) => {
+const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
   const navigate = useNavigate();
 
   const handleStartQuiz = () => {
@@ -12,15 +11,6 @@ const FormTelaPrincipal = ({ name, setName, pdx, setPdx, turno, setTurno }) => {
   return (
     <div className='form'>
       <form>
-        <div className='input-field'>
-          <input
-            type='text'
-            placeholder='Nome'
-            required
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-        </div>
         <div className='input-field'>
           <input
             type='text'
@@ -41,7 +31,9 @@ const FormTelaPrincipal = ({ name, setName, pdx, setPdx, turno, setTurno }) => {
             <option value='turno-noite'>De 15:00 às 21:00</option>
           </select>
         </div>
-        <button type='button' onClick={handleStartQuiz}>Iniciar Quiz</button>
+        <button className='iniciarQuiz' type='button' onClick={handleStartQuiz}>
+          Iniciar Quiz
+        </button>
       </form>
     </div>
   );
