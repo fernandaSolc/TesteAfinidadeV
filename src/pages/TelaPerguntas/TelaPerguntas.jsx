@@ -6,7 +6,7 @@ import TitleTelaPerguntas from '../../components/TitleTelaPerguntas/TitleTelaPer
 
 const TelaPerguntas = () => {
   return (
-    <>
+    <div id='telaPerguntas'>
       <CardTelaPerguntas>
         <TitleTelaPerguntas />
         <CardRespostas />
@@ -15,7 +15,7 @@ const TelaPerguntas = () => {
           <BotaoProxima />
         </div>
       </CardTelaPerguntas>
-    </>
+    </div>
   );
 };
 
