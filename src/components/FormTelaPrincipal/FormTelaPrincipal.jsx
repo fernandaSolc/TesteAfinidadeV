@@ -5,7 +5,9 @@ const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
   const navigate = useNavigate();
 
   const handleStartQuiz = () => {
-    navigate('/quiz');
+    if (pdx) {
+      navigate('/quiz');
+    }
   };
 
   return (
