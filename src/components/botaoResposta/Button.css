@@ -1,0 +1,17 @@
+.circle-button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #B572B4;
+  background-color: transparent;
+  color: #B572B4;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.circle-button.clicked {
+  background-color: #C994C9;
+  color: white;
+  border-color: #C994C9;
+}
