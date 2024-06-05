@@ -4,11 +4,11 @@ import TelaPerguntas from './pages/TelaPerguntas/TelaPerguntas';
 import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
 
 function App() {
-      return (
-  <Router>
+  return (
+    <Router>
       <Routes>
-        <Route path="/" element={<TelaPrincipal />} />
-        <Route path="/quiz" element={<TelaPerguntas />} />
+        <Route path='/' element={<TelaPrincipal />} />
+        <Route path='/quiz' element={<TelaPerguntas />} />
       </Routes>
     </Router>
   );
