@@ -1,3 +1,5 @@
+import './TelaPerguntas.css';
+
 import BotaoAnterior from '../../components/BotaoAnterior/BotaoAnterior';
 import BotaoProxima from '../../components/BotaoProxima/BotaoProxima';
 import CardRespostas from '../../components/CardRespostas/CardRespostas';
@@ -6,7 +8,7 @@ import TitleTelaPerguntas from '../../components/TitleTelaPerguntas/TitleTelaPer
 
 const TelaPerguntas = () => {
   return (
-    <div id='telaPerguntas'>
+    <div className='telaPerguntas'>
       <CardTelaPerguntas>
         <TitleTelaPerguntas />
         <CardRespostas />
