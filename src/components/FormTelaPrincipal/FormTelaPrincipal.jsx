@@ -2,23 +2,24 @@ import { useNavigate } from 'react-router-dom';
 import './FormTelaPrincipal.css';
 import axios from 'axios';
 
-const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
+const FormTelaPrincipal = ({ registrationCode, setRegistrationCode, turno, setTurno }) => {
   const navigate = useNavigate();
 
   const handleStartQuiz = async () => {
-    if (pdx && turno) {
+    if (registrationCode && turno) {
       try {
-        const response = await axios.get(`/api/verify-pdx/${pdx.toUpperCase()}`, {
+        const response = await axios.get(`https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`, {
           headers: {
-            'api-key': process.env.REACT_APP_API_KEY, // Use a variável de ambiente para a chave da API
+            'api-key': process.env.VITE_API_KEY, // Use a variável de ambiente para a chave da API
           },
         });
+        
         const data = response.data;
-        console.log('Nome do aluno:', data.name); // Exibe o nome do aluno no console
+        console.log('Nome do aluno:', data.nomeCompleto); // Exibe o nome do aluno no console
         navigate('/confirmacao');
       } catch (error) {
-        console.error("Erro ao verificar PDX:", error);
-        let errorMessage = "Erro ao verificar PDX";
+        console.error("Erro ao verificar registrationCode:", error);
+        let errorMessage = "Erro ao verificar registrationCode";
         if (
           axios.isAxiosError(error) &&
           error.response &&
@@ -38,10 +39,10 @@ const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
         <div className='input-field'>
           <input
             type='text'
-            placeholder='PDX'
+            placeholder='registrationCode'
             required
-            value={pdx}
-            onChange={e => setPdx(e.target.value)}
+            value={registrationCode}
+            onChange={e => setRegistrationCode(e.target.value)}
           />
         </div>
         <div className='input-field'>
