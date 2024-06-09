@@ -1,18 +1,21 @@
-require('dotenv').config();
-const express = require('express');
-const app = express();
-const pool = require('./db'); // Conexão com o banco de dados
+import '../dotenv/config';
+import express from 'express';
+import pool from './db.mjs'; // Conexão com o banco de dados
 
-app.get('https://api-hml.pdcloud.dev/enrolled/matricula/', async (req, res) => {
+const app = express();
+
+app.use(express.json());
+
+app.get('/api/verify-pdx/:registrationCode', async (req, res) => {
   const { registrationCode } = req.params;
   const apiKey = req.headers['api-key'];
-
-  if (apiKey !== process.env.VITE_API_KEY) {
+//TODO arrumar key e rotas
+  if (apiKey !== process.env.API_KEY) {
     return res.status(403).json({ message: 'Chave de API inválida' });
   }
 
   try {
-    const result = await pool.query('SELECT name FROM students WHERE registrationCode = $1', [registrationCode]);
+    const result = await pool.query('SELECT name FROM students WHERE registration_code = $1', [registrationCode]);
     if (result.rows.length > 0) {
       res.json({ name: result.rows[0].name });
     } else {

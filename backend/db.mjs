@@ -1,6 +1,6 @@
-// db.js
+import 'dotenv/config';
 require('dotenv').config();
-const { Pool } = require('pg');
+import { Pool } from 'pg';
 
 const pool = new Pool({
   host: process.env.PGHOST,

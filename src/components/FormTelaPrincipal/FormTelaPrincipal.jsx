@@ -2,20 +2,20 @@ import { useNavigate } from 'react-router-dom';
 import './FormTelaPrincipal.css';
 import axios from 'axios';
 
-const FormTelaPrincipal = ({ registrationCode, setRegistrationCode, turno, setTurno }) => {
+const FormTelaPrincipal = ({ registrationCode, setregistrationCode, turno, setTurno }) => {
   const navigate = useNavigate();
 
   const handleStartQuiz = async () => {
-    if (registrationCode && turno) {
+    if (registrationCode) {
       try {
         const response = await axios.get(`https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`, {
           headers: {
             'api-key': process.env.VITE_API_KEY, // Use a variável de ambiente para a chave da API
           },
         });
-        
+
         const data = response.data;
-        console.log('Nome do aluno:', data.nomeCompleto); // Exibe o nome do aluno no console
+        console.log('Nome do aluno:', data.nameCompleto); // Ajuste conforme o campo correto na resposta da API
         navigate('/confirmacao');
       } catch (error) {
         console.error("Erro ao verificar registrationCode:", error);
@@ -42,7 +42,7 @@ const FormTelaPrincipal = ({ registrationCode, setRegistrationCode, turno, setTu
             placeholder='registrationCode'
             required
             value={registrationCode}
-            onChange={e => setRegistrationCode(e.target.value)}
+            onChange={e => setregistrationCode(e.target.value)}
           />
         </div>
         <div className='input-field'>
