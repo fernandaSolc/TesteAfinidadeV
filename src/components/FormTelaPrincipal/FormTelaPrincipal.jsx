@@ -38,7 +38,7 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
         });
 
         // Navegar para a página de confirmação
-        navigate('/confirmacao', { state: {registrationCode} });
+        navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
       } catch (error) {
         console.error("Erro ao verificar registrationCode:", error);
         let errorMessage = "Erro ao verificar matrícula";

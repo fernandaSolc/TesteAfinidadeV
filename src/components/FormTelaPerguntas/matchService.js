@@ -63,7 +63,7 @@ const monitores = [
     known_for: "Ser adaptável",
     favorite_subject: "Interface e Introdução à Programação Web",
     turno: "manha",
-    image: "/path/to/image6.png"
+    image: "../img/monitores/joao.svg"
   },
   {
     monitor_id: 7,
@@ -84,6 +84,17 @@ const monitores = [
     technology_interest: "Soluções para o nosso dia a dia.",
     known_for: "Ser adaptável",
     favorite_subject: "Interface e Introdução à Programação Web",
+    turno: "tarde",
+    image: "/path/to/image8.png"
+  },
+  {
+    monitor_id: 9,
+    name: "Felipe Campos",
+    hobbies: ["Jogando videogames."],
+    personality: "Calmo(a) e reservado(a).",
+    technology_interest: "A capacidade de criar experiências visuais e interativas.",
+    known_for: "Ser analítico",
+    favorite_subject: "Linguagem Python",
     turno: "tarde",
     image: "/path/to/image8.png"
   },

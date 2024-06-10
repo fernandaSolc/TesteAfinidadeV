@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TelaPrincipal from "./pages/TelaPrincipal/TelaPrincipal";
 import FormTelaPerguntas from "./components/FormTelaPerguntas/FormTelaPerguntas";
-import TelaEscolhaAgentes from "./pages/TelaEscolhaAgentes/TelaEscolhaAgentes"
+import TelaEscolhaAgentes from "./pages/TelaEscolhaAgentes/TelaEscolhaAgentes";
 import TelaVerificarAluno from "./pages/TelaVerificarAluno/TelaVerificarAluno.jsx";
 
 const FormWrapper = () => {

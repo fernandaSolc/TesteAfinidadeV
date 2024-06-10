@@ -1,28 +1,57 @@
-form {
-  margin-bottom: 1rem;
+/* FormTelaPrincipal.css */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #EED8FF;
 }
 
-.input-field input {
-  width: 20.5vw;
-  height: 7.5vh;
-  border-radius: 1.125rem;
+.input-field {
+  margin-bottom: 20px;
+}
+
+.iniciarQuiz {
+  padding: 10px 20px;
   border: none;
-  font-size: 1.1rem;
-  padding: 0 1rem;
-  margin-top: 1rem;
-  outline: none;
-}
-.input-field select {
-  width: 23.05vw;
-  height: 7vh;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #C994C9;
+  color: white;
   font-size: 1rem;
-  outline: none;
-  padding: 0 0.5rem;
-  border: 2px solid #e7cdfc;
 }
 
-.input-field select:focus {
-  border: 2px solid #ab96bd;
+/* TelaVerificarAluno.css */
+.telaVerificarAluno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #EED8FF;
+}
+
+.titleAluno, .pipipiAluno {
+  margin: 10px 0;
+}
+
+.btnsVerificarAluno {
+  display: flex;
+  gap: 10px;
+}
+
+.btnNao, .btnSim {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnNao {
+  background-color: #ccc;
+}
+
+.btnSim {
+  background-color: #C994C9;
+  color: white;
 }
