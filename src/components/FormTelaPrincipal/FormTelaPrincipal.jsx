@@ -35,7 +35,6 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
         };
 
         console.log(`Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`);
-        console.log(`Usando a chave da API: ${import.meta.   env.VITE_API_KEY}`);
 
         const response = await axios.get(
           `https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`,
