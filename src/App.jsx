@@ -13,21 +13,14 @@ const FormWrapper = () => {
   return <FormTelaPerguntas turno={turno} />;
 };
 
-const ConfirmacaoWrapper = () => {
-  const location = useLocation();
-  const bestMonitor = location.state?.bestMonitor;
-
-  return <TelaEscolhaAgentes bestMonitor={bestMonitor} />;
-};
-
 function App() {
   return (
     <Router>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<TelaPrincipal />} />
         <Route path="/confirmacao" element={<TelaVerificarAluno />} />
         <Route path="/form" element={<FormWrapper />} />
-        <Route path="/agente" element={<ConfirmacaoWrapper />} />
+        <Route path="/agente" element={<TelaEscolhaAgentes />} />
       </Routes>
     </Router>
   );
