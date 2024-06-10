@@ -4,22 +4,20 @@ import { BiLogoGmail } from 'react-icons/bi';
 import { SiCalendly } from 'react-icons/si';
 import Logo from '../../components/Logo/Logo';
 import monitores from './monitores'; // Importar os dados dos monitores
-import { useNavigate, useParams } from 'react-router-dom';
+// import { useNavigate, useParams } from 'react-router-dom';
 
 const TelaMonitorEscolhido = () => {
-  const { id } = useParams(); // Obter o ID do monitor a partir da URL
-  const monitorID = parseInt(id, 10); // Converter o ID para número
-  const navigate = useNavigate(); // Usar useNavigate para navegação;
-  const monitor = monitores.find(m => m.monitor_id === monitorID);
+  // const { id } = useParams(); // Obter o ID do monitor a partir da URL
+  // const monitorID = parseInt(id, 10); // Converter o ID para número
+  // const navigate = useNavigate(); // Usar useNavigate para navegação;
+  const monitor = monitores.find(m => m.monitor_id);
 
   if (!monitor) {
     return (
       <div className='cardMonitorEscolhido'>
         <Logo />
         <div className='notFound'>Monitor não encontrado</div>
-        <button className='backButton' onClick={() => navigate('/')}>
-          Voltar à Tela Inicial
-        </button>
+        <button className='backButton'>Voltar à Tela Inicial</button>
       </div>
     );
   }

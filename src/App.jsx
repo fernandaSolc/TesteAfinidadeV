@@ -32,7 +32,6 @@ function App() {
         <Route path='/monitor/:id' element={<TelaMonitorEscolhido />} />
       </Routes>
     </Router>
-    // <TelaMonitorEscolhido />
   );
 }
 

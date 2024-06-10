@@ -79,6 +79,16 @@ const monitores = [
     calendlyLink: 'https://calendly.com/luccaf',
     image: '/path/to/image8.png',
   },
+  {
+    monitor_id: 9,
+    firstName: 'Felipe',
+    lastName: 'Campos',
+    discordID: '1217554725432594540',
+    discordHandle: 'Felipe Campos',
+    email: 'felipe@projetodesenvolve.com.br',
+    calendlyLink: 'https://calendly.com/felipec',
+    image: '/path/to/image9.png',
+  },
 ];
 
 export default monitores;
