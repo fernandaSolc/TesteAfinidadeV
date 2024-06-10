@@ -3,8 +3,8 @@ import './CardMonitores.css';
 const CardMonitores = props => {
   return (
     <div className='monitor'>
-      <h3>{props.nome}</h3>
-      <h4>{props.sobrenome}</h4>
+      <h2>{props.nome}</h2>
+      <h3>{props.sobrenome}</h3>
     </div>
   );
 };

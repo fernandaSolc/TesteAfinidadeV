@@ -1,0 +1,41 @@
+.telaMonitorEscolhido {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../img/backgroundPD.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardMonitorEscolhido {
+  display: flex;
+  align-items: center;
+  background-color: #f5e6ff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infosMonitor {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  /* width: 100%; Garantir que as infos ocupem a largura total do card */
+}
+
+.icon {
+  font-size: 30px; /* Ajustar o tamanho do ícone */
+  margin-right: 15px; /* Ajustar o espaçamento entre o ícone e o texto */
+}
+
+.texto {
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

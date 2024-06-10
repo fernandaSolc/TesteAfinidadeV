@@ -6,7 +6,7 @@ import Title from '../../components/Title/Title';
 import './TelaPrincipal.css';
 
 const TelaPrincipal = () => {
-  const [pdx, setPdx] = useState('');
+  const [registrationCode, setregistrationCode] = useState('');
   const [turno, setTurno] = useState('');
 
   return (
@@ -15,8 +15,8 @@ const TelaPrincipal = () => {
       <Card>
         <Logo />
         <FormTelaPrincipal
-          pdx={pdx}
-          setPdx={setPdx}
+          registrationCode={registrationCode}
+          setregistrationCode={setregistrationCode}
           turno={turno}
           setTurno={setTurno}
         />
