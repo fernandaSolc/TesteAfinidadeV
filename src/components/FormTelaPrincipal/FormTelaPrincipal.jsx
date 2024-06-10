@@ -19,9 +19,8 @@ function debounce(func, wait) {
 }
 
 const HomePage = ({ onSave, onSnackbarMessage }) => {
-  const [registrationCode, setregistrationCode] = useState("");
+  const [registrationCode, setregistrationCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [turno, setTurno] = useState("");
   const navigate = useNavigate();
 
   const handleStartQuiz = async () => {
@@ -34,7 +33,9 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
           },
         };
 
-        console.log(`Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`);
+        console.log(
+          `Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`
+        );
 
         const response = await axios.get(
           `https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`,
@@ -48,16 +49,19 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
         onSave({
           name: data.nomeCompleto,
           registrationCode: data.registrationCode,
-          preferredName: data.hasPreferredName === true ? data.preferredName : "",
+          preferredName:
+            data.hasPreferredName === true ? data.preferredName : '',
           hasPreferredName: data.hasPreferredName,
           agenteDoSucesso: data.agenteDoSucesso,
         });
 
         // Navegar para a página de confirmação
-        navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
+        navigate('/confirmacao', {
+          state: { nomeCompleto: data.nomeCompleto },
+        });
       } catch (error) {
-        console.error("Erro ao verificar registrationCode:", error);
-        let errorMessage = "Erro ao verificar matrícula";
+        console.error('Erro ao verificar registrationCode:', error);
+        let errorMessage = 'Erro ao verificar matrícula';
         if (
           axios.isAxiosError(error) &&
           error.response &&
@@ -71,7 +75,7 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
         setIsLoading(false);
       }
     } else {
-      onSnackbarMessage("Por favor, preencha todos os campos.");
+      onSnackbarMessage('Por favor, preencha todos os campos.');
     }
   };
 
@@ -87,18 +91,12 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
             onChange={e => setregistrationCode(e.target.value)}
           />
         </div>
-        <div className='input-field'>
-          <select
-            name='turno'
-            value={turno}
-            onChange={e => setTurno(e.target.value)}
-          >
-            <option value=''>Selecione o turno</option>
-            <option value='turno-manha'>De 09:00 às 15:00</option>
-            <option value='turno-noite'>De 15:00 às 21:00</option>
-          </select>
-        </div>
-        <button className='iniciarQuiz' type='button' onClick={handleStartQuiz} disabled={isLoading}>
+        <button
+          className='iniciarQuiz'
+          type='button'
+          onClick={handleStartQuiz}
+          disabled={isLoading}
+        >
           {isLoading ? 'Carregando...' : 'Iniciar Quiz'}
         </button>
       </form>

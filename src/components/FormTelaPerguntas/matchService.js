@@ -1,91 +1,94 @@
 const monitores = [
   {
     monitor_id: 1,
-    name: "Gustavo Felippe",
-    hobbies: ["Jogando videogames"],
-    personality: "Calmo(a) e reservado(a)",
-    technology_interest: "Soluções para o nosso dia a dia.",
-    known_for: "Ser adaptável",
-    favorite_subject: "Interface e Introdução à Programação Web",
-    turno: "manha",
-    image: "/path/to/image1.png"
+    name: 'Gustavo Felippe',
+    hobbies: ['Jogando videogames'],
+    personality: 'Calmo(a) e reservado(a)',
+    technology_interest: 'Soluções para o nosso dia a dia.',
+    known_for: 'Ser adaptável',
+    favorite_subject: 'Interface e Introdução à Programação Web',
+    turno: 'manha',
+    image: '/path/to/image1.png',
   },
   {
     monitor_id: 2,
-    name: "Fernanda Sabrina",
-    hobbies: ["Relaxando em casa com um bom livro, filmes ou séries"],
-    personality: "Energético(a) e extrovertido(a)",
-    technology_interest: "A capacidade de criar experiências visuais e interativas inovadoras.",
-    known_for: "Ser perspicaz",
-    favorite_subject: "Sistema Operacional Linux",
-    turno: "manha",
-    image: "/path/to/image2.png"
+    name: 'Fernanda Sabrina',
+    hobbies: ['Relaxando em casa com um bom livro, filmes ou séries'],
+    personality: 'Energético(a) e extrovertido(a)',
+    technology_interest:
+      'A capacidade de criar experiências visuais e interativas inovadoras.',
+    known_for: 'Ser perspicaz',
+    favorite_subject: 'Sistema Operacional Linux',
+    turno: 'manha',
+    image: '/path/to/image2.png',
   },
   {
     monitor_id: 3,
-    name: "Larissa Felipe",
-    hobbies: ["Relaxando em casa com um bom livro, filmes ou séries"],
-    personality: "Organizado(a) e metódico(a).",
-    technology_interest: "Internet e a forma como as coisas podem ser armazenadas na nuvem.",
-    known_for: "Ser analítico",
-    favorite_subject: "Interface e Introdução à Programação Web",
-    turno: "manha",
-    image: "/path/to/image3.png"
+    name: 'Larissa Felipe',
+    hobbies: ['Relaxando em casa com um bom livro, filmes ou séries'],
+    personality: 'Organizado(a) e metódico(a).',
+    technology_interest:
+      'Internet e a forma como as coisas podem ser armazenadas na nuvem.',
+    known_for: 'Ser analítico',
+    favorite_subject: 'Interface e Introdução à Programação Web',
+    turno: 'manha',
+    image: '/path/to/image3.png',
   },
   {
     monitor_id: 4,
-    name: "Gabriel Moura",
-    hobbies: ["Jogando videogames."],
-    personality: "Energético(a) e extrovertido(a)",
-    technology_interest: "Produtos e invenções tecnológicas.",
-    known_for: "Ser adaptável",
-    favorite_subject: "Linguagem Python",
-    turno: "tarde",
-    image: "/path/to/image4.png"
+    name: 'Gabriel Moura',
+    hobbies: ['Jogando videogames.'],
+    personality: 'Energético(a) e extrovertido(a)',
+    technology_interest: 'Produtos e invenções tecnológicas.',
+    known_for: 'Ser adaptável',
+    favorite_subject: 'Linguagem Python',
+    turno: 'tarde',
+    image: '/path/to/image4.png',
   },
   {
     monitor_id: 5,
-    name: "Emannuel Costa",
-    hobbies: ["Jogando videogames."],
-    personality: "Calmo(a) e reservado(a).",
-    technology_interest: "Produtos e invenções tecnológicas.",
-    known_for: "Ser analítico",
-    favorite_subject: "Linguagem Python",
-    turno: "manha",
-    image: "/path/to/image5.png"
+    name: 'Emannuel Costa',
+    hobbies: ['Jogando videogames.'],
+    personality: 'Calmo(a) e reservado(a).',
+    technology_interest: 'Produtos e invenções tecnológicas.',
+    known_for: 'Ser analítico',
+    favorite_subject: 'Linguagem Python',
+    turno: 'manha',
+    image: '/path/to/image5.png',
   },
   {
     monitor_id: 6,
-    name: "João Vitor",
-    hobbies: ["Jogando videogames."],
-    personality: "Aventureiro(a) e ousado(a).",
-    technology_interest: "A capacidade de criar experiências visuais e interativas inovadoras.",
-    known_for: "Ser adaptável",
-    favorite_subject: "Interface e Introdução à Programação Web",
-    turno: "manha",
-    image: "/path/to/image6.png"
+    name: 'João Vitor',
+    hobbies: ['Jogando videogames.'],
+    personality: 'Aventureiro(a) e ousado(a).',
+    technology_interest:
+      'A capacidade de criar experiências visuais e interativas inovadoras.',
+    known_for: 'Ser adaptável',
+    favorite_subject: 'Interface e Introdução à Programação Web',
+    turno: 'manha',
+    image: '/path/to/image6.png',
   },
   {
     monitor_id: 7,
-    name: "Eduardo Coelho",
-    hobbies: ["Jogando videogames."],
-    personality: "Calmo(a) e reservado(a).",
-    technology_interest: "Produtos e invenções tecnológicas.",
-    known_for: "Ser adaptável",
-    favorite_subject: "Interface e Introdução à Programação Web",
-    turno: "tarde",
-    image: "/path/to/image7.png"
+    name: 'Eduardo Coelho',
+    hobbies: ['Jogando videogames.'],
+    personality: 'Calmo(a) e reservado(a).',
+    technology_interest: 'Produtos e invenções tecnológicas.',
+    known_for: 'Ser adaptável',
+    favorite_subject: 'Interface e Introdução à Programação Web',
+    turno: 'tarde',
+    image: '/path/to/image7.png',
   },
   {
     monitor_id: 8,
-    name: "Lucca Fernandes",
-    hobbies: ["Praticando esportes ou atividades físicas."],
-    personality: "Energético(a) e extrovertido(a).",
-    technology_interest: "Soluções para o nosso dia a dia.",
-    known_for: "Ser adaptável",
-    favorite_subject: "Interface e Introdução à Programação Web",
-    turno: "tarde",
-    image: "/path/to/image8.png"
+    name: 'Lucca Fernandes',
+    hobbies: ['Praticando esportes ou atividades físicas.'],
+    personality: 'Energético(a) e extrovertido(a).',
+    technology_interest: 'Soluções para o nosso dia a dia.',
+    known_for: 'Ser adaptável',
+    favorite_subject: 'Interface e Introdução à Programação Web',
+    turno: 'tarde',
+    image: '/path/to/image8.png',
   },
 ];
 
@@ -93,11 +96,11 @@ export function findBestMatch(aluno) {
   let bestMatch = null;
   let highestScore = 0;
 
-  monitores.forEach((monitor) => {
+  monitores.forEach(monitor => {
     let score = 0;
 
     // Comparar hobbies
-    aluno.hobbies.forEach((hobby) => {
+    aluno.hobbies.forEach(hobby => {
       if (monitor.hobbies.includes(hobby)) {
         score += 1;
       }

@@ -1,5 +1,5 @@
 .telaPrincipal {
-  width: 100%;
+  width: 100vw;
   height: 94.7vh;
   padding-top: 2rem;
   background-image: url('../../img/backgroundPD.svg');
