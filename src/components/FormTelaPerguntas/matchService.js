@@ -8,7 +8,7 @@ const monitores = [
     known_for: "Ser adaptável",
     favorite_subject: "Interface e Introdução à Programação Web",
     turno: "manha",
-    image: "/path/to/image1.png"
+    image: "../img/monitores/gustavo.svg"
   },
   {
     monitor_id: 2,
@@ -19,7 +19,7 @@ const monitores = [
     known_for: "Ser perspicaz",
     favorite_subject: "Sistema Operacional Linux",
     turno: "manha",
-    image: "/path/to/image2.png"
+    image: "../img/monitores/fernanda.svg"
   },
   {
     monitor_id: 3,
@@ -30,18 +30,18 @@ const monitores = [
     known_for: "Ser analítico",
     favorite_subject: "Interface e Introdução à Programação Web",
     turno: "manha",
-    image: "/path/to/image3.png"
+    image: "../img/monitores/larissa.svg"
   },
   {
     monitor_id: 4,
-    name: "Gabriel Moura",
+    name: "Gabriel Mauro",
     hobbies: ["Jogando videogames."],
     personality: "Energético(a) e extrovertido(a)",
     technology_interest: "Produtos e invenções tecnológicas.",
     known_for: "Ser adaptável",
     favorite_subject: "Linguagem Python",
     turno: "tarde",
-    image: "/path/to/image4.png"
+    image: "../img/monitores/gabriel.svg"
   },
   {
     monitor_id: 5,
@@ -52,7 +52,7 @@ const monitores = [
     known_for: "Ser analítico",
     favorite_subject: "Linguagem Python",
     turno: "manha",
-    image: "/path/to/image5.png"
+    image: "../img/monitores/emannuel.svg"
   },
   {
     monitor_id: 6,
@@ -74,7 +74,7 @@ const monitores = [
     known_for: "Ser adaptável",
     favorite_subject: "Interface e Introdução à Programação Web",
     turno: "tarde",
-    image: "/path/to/image7.png"
+    image: "../img/monitores/eduardo.svg"
   },
   {
     monitor_id: 8,
@@ -85,7 +85,7 @@ const monitores = [
     known_for: "Ser adaptável",
     favorite_subject: "Interface e Introdução à Programação Web",
     turno: "tarde",
-    image: "/path/to/image8.png"
+    image: "../img/monitores/lucca.svg"
   },
   {
     monitor_id: 9,
@@ -96,7 +96,7 @@ const monitores = [
     known_for: "Ser analítico",
     favorite_subject: "Linguagem Python",
     turno: "tarde",
-    image: "/path/to/image8.png"
+    image: "../img/monitores/felipe.svg"
   },
 ];
 

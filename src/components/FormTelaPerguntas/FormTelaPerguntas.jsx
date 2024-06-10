@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import TitleTelaPerguntas from "../TitleTelaPerguntas/TitleTelaPerguntas";
 import CardTelaPerguntas from "../CardTelaPerguntas/CardTelaPerguntas";
 import { findBestMatch } from "./matchService";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./FormTelaPerguntas.css";
 
 const perguntas = [
@@ -51,7 +53,7 @@ const FormTelaPerguntas = () => {
   const handleNextQuestion = () => {
     // Verifica se a resposta para a pergunta atual foi selecionada
     if (!respostas[currentQuestionIndex]) {
-      alert("Por favor, selecione uma opção antes de continuar.");
+      toast.error("Por favor, selecione uma opção antes de continuar.");
       return;
     }
 
@@ -66,6 +68,8 @@ const FormTelaPerguntas = () => {
         favorite_subject: respostas[4],
         turno: respostas[5] === "Entre 09:00 às 15:00" ? "manha" : "tarde",
       };
+
+      console.log("Aluno data: ", aluno);
 
       const bestMonitor = findBestMatch(aluno);
       console.log("Melhor monitor para o aluno:", bestMonitor);
@@ -103,6 +107,7 @@ const FormTelaPerguntas = () => {
 
   return (
     <div className="formContainer">
+      <ToastContainer />
       <CardTelaPerguntas>
         <TitleTelaPerguntas pergunta={perguntas[currentQuestionIndex]} />
         <div className="opcoes">

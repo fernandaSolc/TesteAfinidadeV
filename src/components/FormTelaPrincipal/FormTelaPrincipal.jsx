@@ -28,14 +28,16 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
         const data = response.data;
         console.log('Dados do aluno:', data);
 
-        // Salvando os dados do aluno
-        onSave({
-          name: data.nomeCompleto,
-          registrationCode: data.registrationCode,
-          preferredName: data.hasPreferredName === true ? data.preferredName : "",
-          hasPreferredName: data.hasPreferredName,
-          agenteDoSucesso: data.agenteDoSucesso,
-        });
+        if (onSave) {
+          // Salvando os dados do aluno
+          onSave({
+            name: data.nomeCompleto,
+            registrationCode: data.registrationCode,
+            preferredName: data.hasPreferredName === true ? data.preferredName : "",
+            hasPreferredName: data.hasPreferredName,
+            agenteDoSucesso: data.agenteDoSucesso,
+          });
+        }
 
         // Navegar para a página de confirmação
         navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
@@ -50,12 +52,16 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
         ) {
           errorMessage += `: ${error.response.data.message}`;
         }
-        onSnackbarMessage(errorMessage); // Exibe uma mensagem de erro para o usuário
+        if (onSnackbarMessage) {
+          onSnackbarMessage(errorMessage); // Exibe uma mensagem de erro para o usuário
+        }
       } finally {
         setIsLoading(false);
       }
     } else {
-      onSnackbarMessage("Por favor, preencha todos os campos.");
+      if (onSnackbarMessage) {
+        onSnackbarMessage("Por favor, preencha todos os campos.");
+      }
     }
   };
 

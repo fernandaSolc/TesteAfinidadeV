@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: "Rajdhani", sans-serif;;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .formContainer {
@@ -138,4 +138,23 @@ body {
 
 .progress-dots .dot.active {
   background-color: #7D3F7D;
+}
+
+
+.custom-toast-container .Toastify__toast {
+  background-color: #C994C9; 
+  color: #fff; 
+  font-family: "Rajdhani", sans-serif;
+}
+
+.custom-toast-container .Toastify__toast--error {
+  background-color: #ff4d4f;
+}
+
+.custom-toast-container .Toastify__toast--success {
+  background-color: #52c41a; 
+}
+
+.custom-toast-container .Toastify__toast-body {
+  font-size: 16px; 
 }
