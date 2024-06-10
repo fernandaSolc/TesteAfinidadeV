@@ -1,12 +1,9 @@
 import './TitleTelaPerguntas.css';
 
-const TitleTelaPerguntas = () => {
+const TitleTelaPerguntas = ({ pergunta }) => {
   return (
     <div className='titleTelaPerguntas'>
-      <h1>
-        pergunta 1pergunta 1pergunta 1pergunta 1pergunta 1pergunta 1pergunta 1
-        pergunta 1 pergunta 1 pergunta 1 pergunta 1
-      </h1>
+      <h1>{pergunta}</h1>
     </div>
   );
 };

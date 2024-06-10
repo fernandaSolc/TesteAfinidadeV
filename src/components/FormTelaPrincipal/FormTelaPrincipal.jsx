@@ -1,24 +1,63 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FormTelaPrincipal.css';
 import axios from 'axios';
 
-const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
+// Função de debounce (não será usada neste exemplo, mas mantida para referência futura)
+function debounce(func, wait) {
+  let timeout;
+
+  return function (...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+const HomePage = ({ onSave, onSnackbarMessage }) => {
+  const [registrationCode, setregistrationCode] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [turno, setTurno] = useState("");
   const navigate = useNavigate();
 
   const handleStartQuiz = async () => {
-    if (pdx && turno) {
+    if (registrationCode) {
+      setIsLoading(true);
       try {
-        const response = await axios.get(`/api/verify-pdx/${pdx.toUpperCase()}`, {
+        const config = {
           headers: {
-            'api-key': process.env.REACT_APP_API_KEY, // Use a variável de ambiente para a chave da API
+            'Api-Key': import.meta.env.VITE_API_KEY,
           },
-        });
+        };
+
+        console.log(`Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`);
+
+        const response = await axios.get(
+          `https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`,
+          config
+        );
+
         const data = response.data;
-        console.log('Nome do aluno:', data.name); // Exibe o nome do aluno no console
-        navigate('/confirmacao');
+        console.log('Dados do aluno:', data);
+
+        // Salvando os dados do aluno
+        onSave({
+          name: data.nomeCompleto,
+          registrationCode: data.registrationCode,
+          preferredName: data.hasPreferredName === true ? data.preferredName : "",
+          hasPreferredName: data.hasPreferredName,
+          agenteDoSucesso: data.agenteDoSucesso,
+        });
+
+        // Navegar para a página de confirmação
+        navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
       } catch (error) {
-        console.error("Erro ao verificar PDX:", error);
-        let errorMessage = "Erro ao verificar PDX";
+        console.error("Erro ao verificar registrationCode:", error);
+        let errorMessage = "Erro ao verificar matrícula";
         if (
           axios.isAxiosError(error) &&
           error.response &&
@@ -27,8 +66,12 @@ const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
         ) {
           errorMessage += `: ${error.response.data.message}`;
         }
-        alert(errorMessage); // Exibe uma mensagem de erro para o usuário
+        onSnackbarMessage(errorMessage); // Exibe uma mensagem de erro para o usuário
+      } finally {
+        setIsLoading(false);
       }
+    } else {
+      onSnackbarMessage("Por favor, preencha todos os campos.");
     }
   };
 
@@ -38,10 +81,10 @@ const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
         <div className='input-field'>
           <input
             type='text'
-            placeholder='PDX'
+            placeholder='Matrícula'
             required
-            value={pdx}
-            onChange={e => setPdx(e.target.value)}
+            value={registrationCode}
+            onChange={e => setregistrationCode(e.target.value)}
           />
         </div>
         <div className='input-field'>
@@ -55,12 +98,12 @@ const FormTelaPrincipal = ({ pdx, setPdx, turno, setTurno }) => {
             <option value='turno-noite'>De 15:00 às 21:00</option>
           </select>
         </div>
-        <button className='iniciarQuiz' type='button' onClick={handleStartQuiz}>
-          Iniciar Quiz
+        <button className='iniciarQuiz' type='button' onClick={handleStartQuiz} disabled={isLoading}>
+          {isLoading ? 'Carregando...' : 'Iniciar Quiz'}
         </button>
       </form>
     </div>
   );
 };
 
-export default FormTelaPrincipal;
+export default HomePage;
