@@ -1,6 +1,141 @@
-.form {
+body {
+  background-color: #EED8FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Rajdhani", sans-serif;;
+}
+
+.formContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
+}
+
+.cardPerguntas {
+  background-color: #F5E6FF;
+  padding: 40px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 430px;
+}
+
+.titleTelaPerguntas h1 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.opcoes label {
+  display: flex;
+  align-items: center;
+  background-color: #F5E6FF;
+  border: 1px solid #C994C9;
+  border-radius: 15px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.opcoes input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #B572B4;
+  background-color: transparent;
+  position: relative;
+}
+
+.opcoes input[type="radio"]::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s;
+}
+
+.opcoes input[type="radio"]:checked::before {
+  background-color: #C994CA;
+}
+
+.opcoes input[type="radio"]:checked + label {
+  background-color: #C994C9;
+  color: white;
+  border-color: #C994C9;
+}
+
+.opcoes label:hover {
+  background-color: #eed8ff;
+  border-color: #D1B3D1;
+}
+
+.opcoes label.clicked {
+  background-color: #E2C6F6;
+  color: rgb(0, 0, 0);
+  border-color: #E2C6F6;
+}
+
+.turno {
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buttons button {
+  margin: 0px 30px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #C994C9;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #A873A8;
+}
+
+.buttons button:disabled {
+  background-color: #ccc;
+}
+
+.progress-dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-dots .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #C994C9;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.progress-dots .dot.active {
+  background-color: #7D3F7D;
 }
