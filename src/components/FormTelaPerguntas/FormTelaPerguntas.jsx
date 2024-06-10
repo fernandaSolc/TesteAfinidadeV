@@ -51,7 +51,7 @@ const FormTelaPerguntas = () => {
   const handleNextQuestion = () => {
     // Verifica se a resposta para a pergunta atual foi selecionada
     if (!respostas[currentQuestionIndex]) {
-      alert('Por favor, selecione uma opção antes de continuar.');
+      toast.error('Por favor, selecione uma opção antes de continuar.');
       return;
     }
 
@@ -67,6 +67,8 @@ const FormTelaPerguntas = () => {
         turno: respostas[5] === 'Entre 09:00 às 15:00' ? 'manha' : 'tarde',
       };
 
+      console.log('Aluno data: ', aluno);
+
       const bestMonitor = findBestMatch(aluno);
       console.log('Melhor monitor para o aluno:', bestMonitor);
 
@@ -78,23 +80,23 @@ const FormTelaPerguntas = () => {
         },
         body: JSON.stringify(aluno),
       })
-        .then(response => {
+        .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
           return response.json();
         })
-        .then(data => {
+        .then((data) => {
           console.log('Success:', data);
-          navigate('/agente ', { state: { bestMonitor } });
+          navigate('/agente', { state: { bestMonitor } });
         })
-        .catch(error => {
+        .catch((error) => {
           console.error('Error:', error);
         });
     }
   };
 
-  const handleOptionChange = e => {
+  const handleOptionChange = (e) => {
     setRespostas({
       ...respostas,
       [currentQuestionIndex]: e.target.value,
@@ -103,6 +105,7 @@ const FormTelaPerguntas = () => {
 
   return (
     <div className='formContainer'>
+      <ToastContainer />
       <CardTelaPerguntas>
         <TitleTelaPerguntas pergunta={perguntas[currentQuestionIndex]} />
         <div className='opcoes'>

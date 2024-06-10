@@ -21,10 +21,27 @@ const ConfirmacaoWrapper = () => {
 };
 
 function App() {
+  const handleSnackbarMessage = (message) => {
+    toast.error(message);
+  };
+
+  const handleSave = (data) => {
+    console.log('Dados salvos:', data);
+  };
+
   return (
     <Router>
+      <ToastContainer />
       <Routes>
-        <Route path='/' element={<TelaPrincipal />} />
+        <Route
+          path='/'
+          element={
+            <TelaPrincipal
+              onSave={handleSave}
+              onSnackbarMessage={handleSnackbarMessage}
+            />
+          }
+        />
         <Route path='/confirmacao' element={<TelaVerificarAluno />} />
         <Route path='/form' element={<FormWrapper />} />
         <Route path='/agente' element={<ConfirmacaoWrapper />} />

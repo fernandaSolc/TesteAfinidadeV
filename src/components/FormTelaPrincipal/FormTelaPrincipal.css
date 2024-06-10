@@ -4,14 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #eed8ff;
-}
-
-.form2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #EED8FF;
 }
 
 .input-field {
@@ -23,7 +16,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #c994c9;
+  background-color: #C994C9;
   color: white;
   font-size: 1rem;
 }
@@ -35,11 +28,10 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #eed8ff;
+  background-color: #EED8FF;
 }
 
-.titleAluno,
-.pipipiAluno {
+.titleAluno, .pipipiAluno {
   margin: 10px 0;
 }
 
@@ -48,8 +40,7 @@
   gap: 10px;
 }
 
-.btnNao,
-.btnSim {
+.btnNao, .btnSim {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -61,6 +52,6 @@
 }
 
 .btnSim {
-  background-color: #c994c9;
+  background-color: #C994C9;
   color: white;
 }
