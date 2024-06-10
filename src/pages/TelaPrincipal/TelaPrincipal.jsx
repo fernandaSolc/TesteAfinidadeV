@@ -7,7 +7,6 @@ import './TelaPrincipal.css';
 
 const TelaPrincipal = () => {
   const [registrationCode, setregistrationCode] = useState('');
-  const [turno, setTurno] = useState('');
 
   return (
     <div className='telaPrincipal'>
@@ -17,8 +16,6 @@ const TelaPrincipal = () => {
         <FormTelaPrincipal
           registrationCode={registrationCode}
           setregistrationCode={setregistrationCode}
-          turno={turno}
-          setTurno={setTurno}
         />
       </Card>
     </div>

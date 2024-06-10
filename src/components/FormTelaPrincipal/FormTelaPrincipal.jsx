@@ -3,22 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './FormTelaPrincipal.css';
 import axios from 'axios';
 
-// Função de debounce (não será usada neste exemplo, mas mantida para referência futura)
-function debounce(func, wait) {
-  let timeout;
-
-  return function (...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-const HomePage = ({ onSave, onSnackbarMessage }) => {
+const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
   const [registrationCode, setregistrationCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -53,7 +38,7 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
         });
 
         // Navegar para a página de confirmação
-        navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
+        navigate('/confirmacao', { state: {registrationCode} });
       } catch (error) {
         console.error("Erro ao verificar registrationCode:", error);
         let errorMessage = "Erro ao verificar matrícula";
@@ -94,4 +79,4 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
   );
 };
 
-export default HomePage;
+export default FormTelaPrincipal;
