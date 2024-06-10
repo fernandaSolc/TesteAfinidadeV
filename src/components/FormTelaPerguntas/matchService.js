@@ -91,10 +91,18 @@ const monitores = [
 
 export function findBestMatch(aluno) {
   let bestMatch = null;
-  let highestScore = 0;
+  let highestScore = -1; // Usar -1 para garantir que sempre haverá um match válido
 
   monitores.forEach((monitor) => {
     let score = 0;
+
+    // Comparar turno preferido
+    if (monitor.turno !== aluno.turno) {
+      console.log(`Desconsiderando monitor ${monitor.name} por turno incompatível.`);
+      return; // Ignorar monitores do turno errado
+    }
+
+    console.log(`Comparando aluno.turno: ${aluno.turno} com monitor.turno: ${monitor.turno}`);
 
     // Comparar hobbies
     aluno.hobbies.forEach((hobby) => {
@@ -123,10 +131,7 @@ export function findBestMatch(aluno) {
       score += 1;
     }
 
-    // Comparar turno preferido
-    if (monitor.turno === aluno.turno) {
-      score += 1;
-    }
+    console.log(`Monitor: ${monitor.name}, Score: ${score}`);
 
     // Atualizar melhor match
     if (score > highestScore) {
@@ -135,5 +140,6 @@ export function findBestMatch(aluno) {
     }
   });
 
+  console.log(`Melhor match: ${bestMatch.name}`);
   return bestMatch;
 }

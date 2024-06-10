@@ -86,7 +86,7 @@ const FormTelaPerguntas = () => {
         })
         .then((data) => {
           console.log("Success:", data);
-          navigate("/agente ", { state: { bestMonitor } });
+          navigate("/agente", { state: { bestMonitor } });
         })
         .catch((error) => {
           console.error("Error:", error);
