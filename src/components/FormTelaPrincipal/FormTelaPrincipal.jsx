@@ -21,7 +21,6 @@ function debounce(func, wait) {
 const HomePage = ({ onSave, onSnackbarMessage }) => {
   const [registrationCode, setregistrationCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [turno, setTurno] = useState("");
   const navigate = useNavigate();
 
   const handleStartQuiz = async () => {
@@ -86,17 +85,6 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
             value={registrationCode}
             onChange={e => setregistrationCode(e.target.value)}
           />
-        </div>
-        <div className='input-field'>
-          <select
-            name='turno'
-            value={turno}
-            onChange={e => setTurno(e.target.value)}
-          >
-            <option value=''>Selecione o turno</option>
-            <option value='turno-manha'>De 09:00 às 15:00</option>
-            <option value='turno-noite'>De 15:00 às 21:00</option>
-          </select>
         </div>
         <button className='iniciarQuiz' type='button' onClick={handleStartQuiz} disabled={isLoading}>
           {isLoading ? 'Carregando...' : 'Iniciar Quiz'}
