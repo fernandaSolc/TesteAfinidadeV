@@ -5,7 +5,6 @@ import TelaPrincipal from './pages/TelaPrincipal/TelaPrincipal';
 import FormTelaPerguntas from './components/FormTelaPerguntas/FormTelaPerguntas';
 import TelaEscolhaAgentes from './pages/TelaEscolhaAgentes/TelaEscolhaAgentes';
 import TelaVerificarAluno from './pages/TelaVerificarAluno/TelaVerificarAluno.jsx';
-import TelaMonitorEscolhido from './pages/TelaMonitorEscolhido/TelaMonitorEscolhido.jsx';
 
 const FormWrapper = () => {
   const location = useLocation();
@@ -29,9 +28,9 @@ function App() {
         <Route path='/confirmacao' element={<TelaVerificarAluno />} />
         <Route path='/form' element={<FormWrapper />} />
         <Route path='/agente' element={<ConfirmacaoWrapper />} />
-        <Route path='/monitor/:id' element={<TelaMonitorEscolhido />} />
       </Routes>
     </Router>
+    // <TelaVerificarAluno />
   );
 }
 

@@ -3,22 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './FormTelaPrincipal.css';
 import axios from 'axios';
 
-// Função de debounce (não será usada neste exemplo, mas mantida para referência futura)
-function debounce(func, wait) {
-  let timeout;
-
-  return function (...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-const HomePage = ({ onSave, onSnackbarMessage }) => {
+const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
   const [registrationCode, setregistrationCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -81,7 +66,7 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
 
   return (
     <div className='form'>
-      <form>
+      <form className='form2'>
         <div className='input-field'>
           <input
             type='text'
@@ -104,4 +89,4 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
   );
 };
 
-export default HomePage;
+export default FormTelaPrincipal;

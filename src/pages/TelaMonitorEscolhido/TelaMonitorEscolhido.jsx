@@ -24,8 +24,8 @@ const TelaMonitorEscolhido = () => {
 
   return (
     <div className='telaMonitorEscolhido'>
+      <h1 className='titleMonitor'>Seu Agente de Sucesso é:</h1>
       <div className='cardMonitorEscolhido'>
-        <Logo />
         <img
           src={monitor.image}
           alt={monitor.firstName}
@@ -33,6 +33,20 @@ const TelaMonitorEscolhido = () => {
         />
         <h2 className='nomeSobrenome'>{monitor.firstName}</h2>
         <h3 className='nomeSobrenome sobrenome'>{monitor.lastName}</h3>
+        <div className='infosMonitor'>
+          <SiCalendly className='icon calendly' />
+          {/* TODO Olhar com o matheus se vai manter ou não */}
+          <h2 className='texto'>
+            <a
+              href={monitor.calendlyLink}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='links'
+            >
+              Link de agendamento
+            </a>
+          </h2>
+        </div>
         <div className='infosMonitor'>
           <AiOutlineDiscord className='icon discord' />
           <h2 className='texto'>
@@ -51,19 +65,6 @@ const TelaMonitorEscolhido = () => {
           <h2 className='texto'>
             <a href={`mailto:${monitor.email}`} className='links'>
               {monitor.email}
-            </a>
-          </h2>
-        </div>
-        <div className='infosMonitor'>
-          <SiCalendly className='icon calendly' />
-          <h2 className='texto'>
-            <a
-              href={monitor.calendlyLink}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='links'
-            >
-              Link de agendamento
             </a>
           </h2>
         </div>

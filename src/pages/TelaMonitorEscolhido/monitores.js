@@ -1,3 +1,5 @@
+import joaoImage from '../../img/monitores/joao.svg';
+
 const monitores = [
   {
     monitor_id: 1,
@@ -7,7 +9,7 @@ const monitores = [
     discordHandle: 'Gustavo Felippe',
     email: 'gustavo@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/gustavo-pd',
-    image: '/path/to/image.png',
+    image: joaoImage,
   },
   {
     monitor_id: 2,
@@ -25,17 +27,17 @@ const monitores = [
     lastName: 'Felipe',
     discordID: '1180131301446127637',
     discordHandle: 'Larissa',
-    email: 'larissa@projetodesenvolve.com.br',
+    email: 'larissafelipe@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/larissafelipe/monitoria-1',
     image: '/path/to/image3.png',
   },
   {
     monitor_id: 4,
     firstName: 'Gabriel',
-    lastName: 'Moura',
+    lastName: 'Mauro',
     discordID: '345678901234567890',
     discordHandle: 'gabrielm',
-    email: 'gabriel@projetodesenvolve.com.br',
+    email: 'gabriel.mauro@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/gabrielm',
     image: '/path/to/image4.png',
   },
@@ -45,8 +47,8 @@ const monitores = [
     lastName: 'Costa',
     discordID: '456789012345678901',
     discordHandle: 'emannuelc',
-    email: 'emannuel@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/emannuelc',
+    email: 'emannuelcosta@projetodesenvolve.com.br',
+    calendlyLink: 'https://calendly.com/emannuelcosta/monitoria-obrigatoria',
     image: '/path/to/image5.png',
   },
   {
@@ -55,9 +57,9 @@ const monitores = [
     lastName: 'Vitor',
     discordID: '567890123456789012',
     discordHandle: 'joaov',
-    email: 'joao@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/joaov',
-    image: '/path/to/image6.png',
+    email: 'joaocardoso@projetodesenvolve.com.br',
+    calendlyLink: 'https://calendly.com/joaocardosopd/monitoria',
+    image: joaoImage,
   },
   {
     monitor_id: 7,
@@ -65,7 +67,7 @@ const monitores = [
     lastName: 'Coelho',
     discordID: '678901234567890123',
     discordHandle: 'eduardoc',
-    email: 'eduardo@projetodesenvolve.com.br',
+    email: 'eduardocoelho@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/eduardoc',
     image: '/path/to/image7.png',
   },
