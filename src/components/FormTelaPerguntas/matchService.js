@@ -32,7 +32,7 @@ const monitores = [
     known_for: 'Ser analítico',
     favorite_subject: 'Interface e Introdução à Programação Web',
     turno: 'manha',
-    image: '../img/monitores/larissa.svg',
+    image: '../img/monitores/lari.svg',
   },
   {
     monitor_id: 4,
@@ -43,7 +43,7 @@ const monitores = [
     known_for: 'Ser adaptável',
     favorite_subject: 'Linguagem Python',
     turno: 'tarde',
-    image: '../img/monitores/gabriel.svg',
+    image: '../img/monitores/gabrielMauro.svg',
   },
   {
     monitor_id: 5,
@@ -54,7 +54,7 @@ const monitores = [
     known_for: 'Ser analítico',
     favorite_subject: 'Linguagem Python',
     turno: 'manha',
-    image: '../img/monitores/emannuel.svg',
+    image: '../img/monitores/mannel.svg',
   },
   {
     monitor_id: 6,
