@@ -1,6 +1,8 @@
 import './FormTelaPerguntas.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import TitleTelaPerguntas from '../TitleTelaPerguntas/TitleTelaPerguntas';
 import CardTelaPerguntas from '../CardTelaPerguntas/CardTelaPerguntas';
 import { findBestMatch } from './matchService';
@@ -50,7 +52,7 @@ const FormTelaPerguntas = () => {
 
   const handleNextQuestion = () => {
     if (!respostas[currentQuestionIndex]) {
-      alert('Por favor, selecione uma opção antes de continuar.');
+      toast.error('Por favor, selecione uma opção antes de continuar.');
       return;
     }
 
@@ -81,6 +83,7 @@ const FormTelaPerguntas = () => {
 
   return (
     <div className='formContainer'>
+      <ToastContainer />
       <CardTelaPerguntas>
         <TitleTelaPerguntas pergunta={perguntas[currentQuestionIndex]} />
         <div className='opcoes'>

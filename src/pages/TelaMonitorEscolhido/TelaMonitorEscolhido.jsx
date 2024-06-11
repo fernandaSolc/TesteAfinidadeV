@@ -1,9 +1,9 @@
 import './TelaMonitorEscolhido.css';
+import Logo from '../../components/Logo/Logo';
+import monitores from './monitores';
 import { AiOutlineDiscord } from 'react-icons/ai';
 import { BiLogoGmail } from 'react-icons/bi';
 import { SiCalendly } from 'react-icons/si';
-import Logo from '../../components/Logo/Logo';
-import monitores from './monitores'; // Importar os dados dos monitores
 
 const TelaMonitorEscolhido = ({ monitorID }) => {
   const monitor = monitores.find((m) => m.monitor_id === monitorID);

@@ -9,7 +9,7 @@ const monitores = [
     discordHandle: 'Gustavo Felippe',
     email: 'gustavo@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/gustavo-pd',
-    image: joaoImage,
+    image: '../../img/monitores/gu.svg',
   },
   {
     monitor_id: 2,
@@ -19,7 +19,7 @@ const monitores = [
     discordHandle: 'Fernanda Oliveira',
     email: 'fernandasabrina@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/fernandas',
-    image: '/path/to/image2.png',
+    image: '../../img/monitores/fernanda.svg',
   },
   {
     monitor_id: 3,
@@ -29,7 +29,7 @@ const monitores = [
     discordHandle: 'Larissa',
     email: 'larissafelipe@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/larissafelipe/monitoria-1',
-    image: '/path/to/image3.png',
+    image: '../../img/monitores/lari.svg',
   },
   {
     monitor_id: 4,
@@ -39,7 +39,7 @@ const monitores = [
     discordHandle: 'gabrielm',
     email: 'gabriel.mauro@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/gabrielm',
-    image: '/path/to/image4.png',
+    image: '../../img/monitores/gabrielMauro.svg',
   },
   {
     monitor_id: 5,
@@ -49,7 +49,7 @@ const monitores = [
     discordHandle: 'emannuelc',
     email: 'emannuelcosta@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/emannuelcosta/monitoria-obrigatoria',
-    image: '/path/to/image5.png',
+    image: '../../img/monitores/mannel.svg',
   },
   {
     monitor_id: 6,
@@ -69,7 +69,7 @@ const monitores = [
     discordHandle: 'eduardoc',
     email: 'eduardocoelho@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/eduardoc',
-    image: '/path/to/image7.png',
+    image: '../../img/monitores/eduardo.svg',
   },
   {
     monitor_id: 8,
@@ -79,7 +79,7 @@ const monitores = [
     discordHandle: 'luccaf',
     email: 'lucca@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/luccaf',
-    image: '/path/to/image8.png',
+    image: '../../img/monitores/lucca.svg',
   },
   {
     monitor_id: 9,
@@ -89,7 +89,7 @@ const monitores = [
     discordHandle: 'Felipe Campos',
     email: 'felipe@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/felipec',
-    image: '/path/to/image9.png',
+    image: '../../img/monitores/felipe.svg',
   },
 ];
 
