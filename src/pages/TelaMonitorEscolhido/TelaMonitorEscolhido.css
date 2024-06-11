@@ -26,8 +26,7 @@
 
 .infosMonitor {
   display: flex;
-  align-items: center;
-  margin: 10px 0;
+  margin: 7px 0;
 }
 
 .icon {
@@ -46,15 +45,11 @@
 
 .links {
   text-decoration: none;
-  color: inherit;
+  color: #84659b;
 }
 
 .nomeSobrenome {
   padding: 0;
-}
-
-.sobrenome {
-  margin-bottom: 10px;
 }
 
 .notFound {
@@ -77,5 +72,27 @@
 }
 
 .titleMonitor {
+  color: #84659b;
+}
+
+.nomes {
+  color: #84659b;
+  text-align: center;
+}
+
+.linksMonitor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoDiscord {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.textosMonitor {
   color: #84659b;
 }
