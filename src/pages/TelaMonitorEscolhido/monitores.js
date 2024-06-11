@@ -43,8 +43,8 @@ const monitores = [
     monitor_id: 4,
     firstName: 'Gabriel',
     lastName: 'Mauro',
-    discordID: '345678901234567890',
-    discordHandle: 'gabrielm',
+    discordID: '1217556731224260660',
+    discordHandle: 'Gabriel Mauro',
     email: 'gabriel.mauro@projetodesenvolve.com.br',
     calendlyLink:
       'https://calendly.com/gabriel-mauro/monitoria-semanal-obrigatoria-1',
