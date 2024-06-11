@@ -1,4 +1,12 @@
+import guImage from '../../img/monitores/gu.svg';
+import feImage from '../../img/monitores/fernanda.svg';
+import lariImage from '../../img/monitores/lari.svg';
+import gabrielMauroImage from '../../img/monitores/gabrielMauro.svg';
+import emannuelImage from '../../img/monitores/mannel.svg';
 import joaoImage from '../../img/monitores/joao.svg';
+import eduardoImage from '../../img/monitores/eduardo.svg';
+import luccaImage from '../../img/monitores/lucca.svg';
+import felipeImage from '../../img/monitores/felipe.svg';
 
 const monitores = [
   {
@@ -9,7 +17,7 @@ const monitores = [
     discordHandle: 'Gustavo Felippe',
     email: 'gustavo@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/gustavo-pd',
-    image: joaoImage,
+    image: guImage,
   },
   {
     monitor_id: 2,
@@ -18,8 +26,8 @@ const monitores = [
     discordID: '1204433797777465418',
     discordHandle: 'Fernanda Oliveira',
     email: 'fernandasabrina@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/fernandas',
-    image: '/path/to/image2.png',
+    calendlyLink: 'https://calendly.com/fernandasabrina/monitoria',
+    image: feImage,
   },
   {
     monitor_id: 3,
@@ -29,7 +37,7 @@ const monitores = [
     discordHandle: 'Larissa',
     email: 'larissafelipe@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/larissafelipe/monitoria-1',
-    image: '/path/to/image3.png',
+    image: lariImage,
   },
   {
     monitor_id: 4,
@@ -38,8 +46,9 @@ const monitores = [
     discordID: '345678901234567890',
     discordHandle: 'gabrielm',
     email: 'gabriel.mauro@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/gabrielm',
-    image: '/path/to/image4.png',
+    calendlyLink:
+      'https://calendly.com/gabriel-mauro/monitoria-semanal-obrigatoria-1',
+    image: gabrielMauroImage,
   },
   {
     monitor_id: 5,
@@ -49,7 +58,7 @@ const monitores = [
     discordHandle: 'emannuelc',
     email: 'emannuelcosta@projetodesenvolve.com.br',
     calendlyLink: 'https://calendly.com/emannuelcosta/monitoria-obrigatoria',
-    image: '/path/to/image5.png',
+    image: emannuelImage,
   },
   {
     monitor_id: 6,
@@ -68,8 +77,9 @@ const monitores = [
     discordID: '678901234567890123',
     discordHandle: 'eduardoc',
     email: 'eduardocoelho@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/eduardoc',
-    image: '/path/to/image7.png',
+    calendlyLink:
+      'https://calendly.com/eduardocoelho/monitoria-semanal-obrigatoria-projeto-desenvolve',
+    image: eduardoImage,
   },
   {
     monitor_id: 8,
@@ -78,8 +88,8 @@ const monitores = [
     discordID: '789012345678901234',
     discordHandle: 'luccaf',
     email: 'lucca@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/luccaf',
-    image: '/path/to/image8.png',
+    calendlyLink: 'https://calendly.com/lucca-erzv/monitoria-semanal-1',
+    image: luccaImage,
   },
   {
     monitor_id: 9,
@@ -88,8 +98,9 @@ const monitores = [
     discordID: '1217554725432594540',
     discordHandle: 'Felipe Campos',
     email: 'felipe@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/felipec',
-    image: '/path/to/image9.png',
+    calendlyLink:
+      'https://calendly.com/felipecampospd/monitoria-semanal-obrigatoria-projeto-desenvolve',
+    image: felipeImage,
   },
 ];
 
