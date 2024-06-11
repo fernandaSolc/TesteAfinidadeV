@@ -1,9 +1,9 @@
+import './FormTelaPerguntas.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TitleTelaPerguntas from '../TitleTelaPerguntas/TitleTelaPerguntas';
 import CardTelaPerguntas from '../CardTelaPerguntas/CardTelaPerguntas';
 import { findBestMatch } from './matchService';
-import './FormTelaPerguntas.css';
 
 const perguntas = [
   'Como você costuma passar seu tempo livre?',
@@ -49,9 +49,8 @@ const FormTelaPerguntas = () => {
   const navigate = useNavigate();
 
   const handleNextQuestion = () => {
-    // Verifica se a resposta para a pergunta atual foi selecionada
     if (!respostas[currentQuestionIndex]) {
-      toast.error('Por favor, selecione uma opção antes de continuar.');
+      alert('Por favor, selecione uma opção antes de continuar.');
       return;
     }
 
@@ -67,32 +66,9 @@ const FormTelaPerguntas = () => {
         turno: respostas[5] === 'Entre 09:00 às 15:00' ? 'manha' : 'tarde',
       };
 
-      console.log('Aluno data: ', aluno);
-
       const bestMonitor = findBestMatch(aluno);
-      console.log('Melhor monitor para o aluno:', bestMonitor);
 
-      // Enviar o formulário
-      fetch('/api/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(aluno),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log('Success:', data);
-          navigate('/agente', { state: { bestMonitor } });
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
+      navigate('/agente', { state: { monitorID: bestMonitor.monitor_id } });
     }
   };
 
@@ -105,7 +81,6 @@ const FormTelaPerguntas = () => {
 
   return (
     <div className='formContainer'>
-      <ToastContainer />
       <CardTelaPerguntas>
         <TitleTelaPerguntas pergunta={perguntas[currentQuestionIndex]} />
         <div className='opcoes'>

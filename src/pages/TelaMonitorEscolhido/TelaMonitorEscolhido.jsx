@@ -4,13 +4,9 @@ import { BiLogoGmail } from 'react-icons/bi';
 import { SiCalendly } from 'react-icons/si';
 import Logo from '../../components/Logo/Logo';
 import monitores from './monitores'; // Importar os dados dos monitores
-// import { useNavigate, useParams } from 'react-router-dom';
 
-const TelaMonitorEscolhido = () => {
-  // const { id } = useParams(); // Obter o ID do monitor a partir da URL
-  // const monitorID = parseInt(id, 10); // Converter o ID para número
-  // const navigate = useNavigate(); // Usar useNavigate para navegação;
-  const monitor = monitores.find(m => m.monitor_id);
+const TelaMonitorEscolhido = ({ monitorID }) => {
+  const monitor = monitores.find((m) => m.monitor_id === monitorID);
 
   if (!monitor) {
     return (
@@ -35,7 +31,6 @@ const TelaMonitorEscolhido = () => {
         <h3 className='nomeSobrenome sobrenome'>{monitor.lastName}</h3>
         <div className='infosMonitor'>
           <SiCalendly className='icon calendly' />
-          {/* TODO Olhar com o matheus se vai manter ou não */}
           <h2 className='texto'>
             <a
               href={monitor.calendlyLink}

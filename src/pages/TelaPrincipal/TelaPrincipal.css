@@ -10,6 +10,16 @@
   align-items: center;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  padding: 2rem; /* Espaço interno */
+  gap: 1.5rem; /* Espaço entre os elementos */
+}
+
+
 .iniciarQuiz {
   width: 15vw;
   height: 9vh;
