@@ -8,7 +8,7 @@ const monitores = [
     known_for: 'Ser adaptável',
     favorite_subject: 'Interface e Introdução à Programação Web',
     turno: 'manha',
-    image: '../img/monitores/gustavo.svg',
+    image: '../img/monitores/gu.svg',
   },
   {
     monitor_id: 2,

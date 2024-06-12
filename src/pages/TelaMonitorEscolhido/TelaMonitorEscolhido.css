@@ -26,12 +26,12 @@
 
 .infosMonitor {
   display: flex;
-  margin: 7px 0;
+  margin: 5px 0;
 }
 
 .icon {
   font-size: 30px; /* Ajustar o tamanho do ícone */
-  margin-right: 10px; /* Ajustar o espaçamento entre o ícone e o texto */
+  /* margin-right: 10px; */
 }
 
 .texto {

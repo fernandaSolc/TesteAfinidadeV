@@ -1,15 +1,10 @@
 import './TelaMonitorEscolhido.css';
 import Logo from '../../components/Logo/Logo';
 import monitores from './monitores';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { AiOutlineDiscord } from 'react-icons/ai';
 import { BiLogoGmail } from 'react-icons/bi';
 import { SiCalendly } from 'react-icons/si';
-<<<<<<< HEAD
-import Logo from '../../components/Logo/Logo';
-import monitores from './monitores'; // Importar os dados dos monitores
-import { useLocation, useNavigate } from 'react-router-dom';
-=======
->>>>>>> origin/Larissa
 
 const TelaMonitorEscolhido = () => {
   const location = useLocation();
