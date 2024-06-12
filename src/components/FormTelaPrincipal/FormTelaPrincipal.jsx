@@ -4,7 +4,7 @@ import './FormTelaPrincipal.css';
 import axios from 'axios';
 
 const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
-  const [registrationCode, setregistrationCode] = useState('');
+  const [registrationCode, setregistrationCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -18,9 +18,7 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
           },
         };
 
-        console.log(
-          `Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`
-        );
+        console.log(`Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`);
 
         const response = await axios.get(
           `https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`,
@@ -30,25 +28,22 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
         const data = response.data;
         console.log('Dados do aluno:', data);
 
+        // Salvando os dados do aluno
         if (onSave) {
-          // Salvando os dados do aluno
           onSave({
             name: data.nomeCompleto,
             registrationCode: data.registrationCode,
-            preferredName:
-              data.hasPreferredName === true ? data.preferredName : '',
+            preferredName: data.hasPreferredName === true ? data.preferredName : "",
             hasPreferredName: data.hasPreferredName,
             agenteDoSucesso: data.agenteDoSucesso,
           });
         }
 
         // Navegar para a página de confirmação
-        navigate('/confirmacao', {
-          state: { nomeCompleto: data.nomeCompleto },
-        });
+        navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
       } catch (error) {
-        console.error('Erro ao verificar registrationCode:', error);
-        let errorMessage = 'Erro ao verificar matrícula';
+        console.error("Erro ao verificar registrationCode:", error);
+        let errorMessage = "Erro ao verificar matrícula";
         if (
           axios.isAxiosError(error) &&
           error.response &&
@@ -65,29 +60,24 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
       }
     } else {
       if (onSnackbarMessage) {
-        onSnackbarMessage('Por favor, preencha todos os campos.');
+        onSnackbarMessage("Por favor, preencha todos os campos.");
       }
     }
   };
 
   return (
     <div className='form'>
-      <form className='form2'>
+      <form>
         <div className='input-field'>
           <input
             type='text'
             placeholder='Matrícula'
             required
             value={registrationCode}
-            onChange={(e) => setregistrationCode(e.target.value)}
+            onChange={e => setregistrationCode(e.target.value)}
           />
         </div>
-        <button
-          className='iniciarQuiz'
-          type='button'
-          onClick={handleStartQuiz}
-          disabled={isLoading}
-        >
+        <button className='iniciarQuiz' type='button' onClick={handleStartQuiz} disabled={isLoading}>
           {isLoading ? 'Carregando...' : 'Iniciar Quiz'}
         </button>
       </form>

@@ -20,15 +20,11 @@ const TelaVerificarAluno = () => {
     <div className='telaVerificarAluno'>
       <Title />
       <CardTelaVerificarAluno>
-        <h2 className='titleAluno'>Aluno(a):</h2>
-        <h2 className='pipipiAluno'>{nomeCompleto || 'Nome não disponível'}</h2>
+        <h2 className='titleAluno'>Você é:</h2>
+        <h2 className='aluno'>{nomeCompleto || 'Nome não disponível'}</h2>
         <div className='btnsVerificarAluno'>
-          <button className='btnNao' onClick={handleDeny}>
-            Não
-          </button>
-          <button className='btnSim' onClick={handleConfirm}>
-            Sim
-          </button>
+          <button className='btnNao' onClick={handleDeny}>Não</button>
+          <button className='btnSim' onClick={handleConfirm}>Sim</button>
         </div>
       </CardTelaVerificarAluno>
     </div>
