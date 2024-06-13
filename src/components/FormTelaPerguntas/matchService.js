@@ -37,7 +37,7 @@ const monitores = [
   {
     monitor_id: 4,
     name: 'Gabriel Mauro',
-    hobbies: ['Jogando videogames.'],
+    hobbies: ['Jogando videogames'],
     personality: 'Energético(a) e extrovertido(a)',
     technology_interest: 'Produtos e invenções tecnológicas.',
     known_for: 'Ser adaptável',
@@ -48,7 +48,7 @@ const monitores = [
   {
     monitor_id: 5,
     name: 'Emannuel Costa',
-    hobbies: ['Jogando videogames.'],
+    hobbies: ['Jogando videogames'],
     personality: 'Calmo(a) e reservado(a).',
     technology_interest: 'Produtos e invenções tecnológicas.',
     known_for: 'Ser analítico',
@@ -59,7 +59,7 @@ const monitores = [
   {
     monitor_id: 6,
     name: 'João Vitor',
-    hobbies: ['Jogando videogames.'],
+    hobbies: ['Jogando videogames'],
     personality: 'Aventureiro(a) e ousado(a).',
     technology_interest:
       'A capacidade de criar experiências visuais e interativas inovadoras.',
@@ -71,7 +71,7 @@ const monitores = [
   {
     monitor_id: 7,
     name: 'Eduardo Coelho',
-    hobbies: ['Jogando videogames.'],
+    hobbies: ['Jogando videogames'],
     personality: 'Calmo(a) e reservado(a).',
     technology_interest: 'Produtos e invenções tecnológicas.',
     known_for: 'Ser adaptável',
@@ -82,7 +82,7 @@ const monitores = [
   {
     monitor_id: 8,
     name: 'Lucca Fernandes',
-    hobbies: ['Praticando esportes ou atividades físicas.'],
+    hobbies: ['Praticando esportes ou atividades físicas'],
     personality: 'Energético(a) e extrovertido(a).',
     technology_interest: 'Soluções para o nosso dia a dia.',
     known_for: 'Ser adaptável',
@@ -93,7 +93,7 @@ const monitores = [
   {
     monitor_id: 9,
     name: 'Felipe Campos',
-    hobbies: ['Jogando videogames.'],
+    hobbies: ['Jogando videogames'],
     personality: 'Calmo(a) e reservado(a).',
     technology_interest:
       'A capacidade de criar experiências visuais e interativas.',
