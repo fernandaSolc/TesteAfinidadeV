@@ -1,4 +1,4 @@
-.card {
+.cardPrincipal {
   width: 30vw;
   height: 68vh;
   margin-bottom: 1.5rem;
@@ -10,5 +10,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem; /* Espaço entre os elementos */
+  gap: 1.5rem;
 }

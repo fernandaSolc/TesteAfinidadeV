@@ -1,11 +1,9 @@
 body {
-  background-color: #EED8FF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #eed8ff;
+
   height: 100vh;
   margin: 0;
-  font-family: "Rajdhani", sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .formContainer {
@@ -17,11 +15,11 @@ body {
 }
 
 .cardPerguntas {
-  background-color: #F5E6FF;
+  background-color: #f5e6ff;
   padding: 40px;
   border-radius: 50px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  /* text-align: center; */
   width: 430px;
 }
 
@@ -34,7 +32,7 @@ body {
 .opcoes label {
   display: flex;
   align-items: center;
-  background-color: #F5E6FF;
+  background-color: #f5e6ff;
   border-radius: 15px;
   padding: 10px 15px;
   margin-bottom: 15px;
@@ -42,7 +40,7 @@ body {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.opcoes input[type="radio"] {
+.opcoes input[type='radio'] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -50,12 +48,12 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 1px solid #B572B4;
+  border: 1px solid #b572b4;
   background-color: transparent;
   position: relative;
 }
 
-.opcoes input[type="radio"]::before {
+.opcoes input[type='radio']::before {
   content: '';
   display: block;
   width: 18px;
@@ -69,25 +67,25 @@ body {
   transition: background-color 0.3s;
 }
 
-.opcoes input[type="radio"]:checked::before {
-  background-color: #C994CA;
+.opcoes input[type='radio']:checked::before {
+  background-color: #c994ca;
 }
 
-.opcoes input[type="radio"]:checked + label {
-  background-color: #C994C9;
+.opcoes input[type='radio']:checked + label {
+  background-color: #c994c9;
   color: white;
-  border-color: #C994C9;
+  border-color: #c994c9;
 }
 
 .opcoes label:hover {
   background-color: #eed8ff;
-  border-color: #D1B3D1;
+  border-color: #d1b3d1;
 }
 
 .opcoes label.clicked {
-  background-color: #E2C6F6;
+  background-color: #e2c6f6;
   color: rgb(0, 0, 0);
-  border-color: #E2C6F6;
+  border-color: #e2c6f6;
 }
 
 .turno {
@@ -106,14 +104,14 @@ body {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  background-color: #C994C9;
+  background-color: #c994c9;
   color: white;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
 
 .buttons button:hover {
-  background-color: #A873A8;
+  background-color: #a873a8;
 }
 
 .buttons button:disabled {
@@ -130,20 +128,19 @@ body {
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: #C994C9;
+  background-color: #c994c9;
   border-radius: 50%;
   display: inline-block;
 }
 
 .progress-dots .dot.active {
-  background-color: #7D3F7D;
+  background-color: #7d3f7d;
 }
 
-
 .custom-toast-container .Toastify__toast {
-  background-color: #C994C9; 
-  color: #fff; 
-  font-family: "Rajdhani", sans-serif;
+  background-color: #c994c9;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .custom-toast-container .Toastify__toast--error {
@@ -151,9 +148,9 @@ body {
 }
 
 .custom-toast-container .Toastify__toast--success {
-  background-color: #52c41a; 
+  background-color: #52c41a;
 }
 
 .custom-toast-container .Toastify__toast-body {
-  font-size: 16px; 
+  font-size: 16px;
 }

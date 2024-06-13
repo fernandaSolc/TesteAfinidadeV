@@ -1,11 +1,8 @@
 /* FormTelaPrincipal.css */
 .form {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
-  background-color: #EED8FF;
+  height: 30vh;
+  background-color: #eed8ff;
 }
 
 .form2 {
@@ -19,16 +16,21 @@
 }
 
 .iniciarQuiz {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  width: 15vw;
+  height: 9vh;
+  font-weight: 600;
+  font-size: 1.5rem;
   cursor: pointer;
-  background-color: #C994C9;
-  color: white;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #fff;
+  background-color: #c57cc4;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.iniciarQuiz:hover {
+  background-color: #c75cea;
 }
 
 /* TelaVerificarAluno.css */
@@ -38,30 +40,10 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #EED8FF;
+  background-color: #eed8ff;
 }
 
-.titleAluno, .pipipiAluno {
+.titleAluno,
+.pipipiAluno {
   margin: 10px 0;
-}
-
-.btnsVerificarAluno {
-  display: flex;
-  gap: 10px;
-}
-
-.btnNao, .btnSim {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btnNao {
-  background-color: #ccc;
-}
-
-.btnSim {
-  background-color: #C994C9;
-  color: white;
 }

@@ -24,7 +24,7 @@ const monitores = [
     lastName: 'Sabrina',
     discordHandle: '@fernandasolc',
     email: 'fernandasabrina@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/fernandas',
+    calendlyLink: 'https://calendly.com/fernandasabrina/monitoria',
     image: feImage,
   },
   {
@@ -42,7 +42,7 @@ const monitores = [
     lastName: 'Mauro',
     discordHandle: '@gabriel_tamietti',
     email: 'gabriel.mauro@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/gabrielm',
+    calendlyLink: 'https://calendly.com/fernandasabrina/monitoria',
     image: gabrielMauroImage,
   },
   {
@@ -69,7 +69,8 @@ const monitores = [
     lastName: 'Coelho',
     discordHandle: '@eduardoocoelho',
     email: 'eduardocoelho@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/eduardoc',
+    calendlyLink:
+      'https://calendly.com/eduardocoelho/monitoria-semanal-obrigatoria-projeto-desenvolve',
     image: eduardoImage,
   },
   {
@@ -78,7 +79,7 @@ const monitores = [
     lastName: 'Fernandes',
     discordHandle: '@fernandes6003',
     email: 'lucca@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/luccaf',
+    calendlyLink: 'https://calendly.com/lucca-erzv/monitoria-semanal-1',
     image: luccaImage,
   },
   {
@@ -87,7 +88,8 @@ const monitores = [
     lastName: 'Campos',
     discordHandle: '@felipecampospd',
     email: 'felipe@projetodesenvolve.com.br',
-    calendlyLink: 'https://calendly.com/felipec',
+    calendlyLink:
+      'https://calendly.com/felipecampospd/monitoria-semanal-obrigatoria-projeto-desenvolve',
     image: felipeImage,
   },
 ];

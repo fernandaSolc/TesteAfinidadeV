@@ -19,6 +19,11 @@
   gap: 1.5rem; /* Espaço entre os elementos */
 }
 
+.btnIniciarQuiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .iniciarQuiz {
   width: 15vw;

@@ -34,14 +34,17 @@ const TelaMonitorEscolhido = () => {
           alt={monitor.firstName}
           className='monitorImage'
         />
-        <h2 className='textosMonitor'>{monitor.firstName}</h2>
-        <h3 className='textosMonitor'>{monitor.lastName}</h3>
+        <div className='containerTextos'>
+          <h2 className='textosMonitor'>{monitor.firstName}</h2>
+          <h3 className='textosMonitor' id='lastName'>
+            {monitor.lastName}
+          </h3>
+        </div>
+
         <div className='linksMonitor'>
           <div className='infosMonitor'>
             <AiOutlineDiscord className='icon discord' />
-            <h2 className='textosMonitor textoDiscord'>
-              {monitor.discordHandle}
-            </h2>
+            <h2 id='textoDiscord'>{monitor.discordHandle}</h2>
           </div>
           <div className='infosMonitor'>
             <SiCalendly className='icon calendly' />
@@ -59,7 +62,11 @@ const TelaMonitorEscolhido = () => {
           <div className='infosMonitor'>
             <BiLogoGmail className='icon gmail' />
             <h2 className='texto'>
-              <a href={`mailto:${monitor.email}`} className='links'>
+              <a
+                href={`mailto:${monitor.email}`}
+                target='_blank'
+                className='links'
+              >
                 {monitor.email}
               </a>
             </h2>
