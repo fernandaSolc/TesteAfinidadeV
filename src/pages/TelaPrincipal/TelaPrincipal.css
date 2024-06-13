@@ -25,24 +25,6 @@
   justify-content: center;
 }
 
-.iniciarQuiz {
-  width: 15vw;
-  height: 9vh;
-  font-weight: 600;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
-  background-color: #c57cc4;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.iniciarQuiz:hover {
-  background-color: #c75cea;
-}
-
 form {
   margin-bottom: 1rem;
 }

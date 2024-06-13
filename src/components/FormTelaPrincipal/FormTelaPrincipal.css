@@ -26,7 +26,7 @@
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .iniciarQuiz:hover {

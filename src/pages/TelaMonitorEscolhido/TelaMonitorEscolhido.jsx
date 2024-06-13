@@ -67,7 +67,7 @@ const TelaMonitorEscolhido = () => {
                 target='_blank'
                 className='links'
               >
-                {monitor.email}
+                Converse com o monitor
               </a>
             </h2>
           </div>

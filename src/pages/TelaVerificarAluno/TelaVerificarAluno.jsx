@@ -20,7 +20,7 @@ const TelaVerificarAluno = () => {
     <div className='telaVerificarAluno'>
       <Title />
       <CardTelaVerificarAluno>
-        <div>
+        <div className='confirmarAluno'>
           <h2 className='titleAluno'>Você é:</h2>
           <h2 className='nomeAluno'>{nomeCompleto || 'Nome não disponível'}</h2>
         </div>
