@@ -1,3 +1,17 @@
-.titleTelaPerguntas h1 {
-  font-size: 20px;
+.titlePergunta {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .titlePergunta {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titlePergunta {
+    font-size: 1.5rem;
+  }
 }

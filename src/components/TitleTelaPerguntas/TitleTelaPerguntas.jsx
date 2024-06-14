@@ -3,7 +3,7 @@ import './TitleTelaPerguntas.css';
 const TitleTelaPerguntas = ({ pergunta }) => {
   return (
     <div className='titleTelaPerguntas'>
-      <h1>{pergunta}</h1>
+      <h1 className='titlePergunta'>{pergunta}</h1>
     </div>
   );
 };

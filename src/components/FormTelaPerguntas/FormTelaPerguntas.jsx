@@ -74,7 +74,7 @@ const FormTelaPerguntas = () => {
     }
   };
 
-  const handleOptionChange = (e) => {
+  const handleOptionChange = e => {
     setRespostas({
       ...respostas,
       [currentQuestionIndex]: e.target.value,
@@ -88,31 +88,37 @@ const FormTelaPerguntas = () => {
         <TitleTelaPerguntas pergunta={perguntas[currentQuestionIndex]} />
         <div className='opcoes'>
           {opcoes[currentQuestionIndex].map((opcao, index) => (
-            <label
-              key={index}
-              className={
-                respostas[currentQuestionIndex] === opcao ? 'clicked' : ''
-              }
-            >
-              <input
-                type='radio'
-                name={`question-${currentQuestionIndex}`}
-                value={opcao}
-                checked={respostas[currentQuestionIndex] === opcao}
-                onChange={handleOptionChange}
-              />
-              {opcao}
-            </label>
+            <>
+              <label
+                key={index}
+                className={
+                  respostas[currentQuestionIndex] === opcao ? 'clicked' : ''
+                }
+              >
+                <div>
+                  <input
+                    type='radio'
+                    name={`question-${currentQuestionIndex}`}
+                    value={opcao}
+                    checked={respostas[currentQuestionIndex] === opcao}
+                    onChange={handleOptionChange}
+                  />
+                </div>
+
+                {opcao}
+              </label>
+            </>
           ))}
         </div>
         <div className='buttons'>
           <button
+            className='btnSimNao'
             disabled={currentQuestionIndex === 0}
             onClick={() => setCurrentQuestionIndex(currentQuestionIndex - 1)}
           >
             Anterior
           </button>
-          <button onClick={handleNextQuestion}>
+          <button onClick={handleNextQuestion} className='btnSimNao'>
             {currentQuestionIndex < perguntas.length - 1 ? 'Próxima' : 'Enviar'}
           </button>
         </div>

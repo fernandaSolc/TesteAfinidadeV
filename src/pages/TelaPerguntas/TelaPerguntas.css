@@ -4,3 +4,16 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1024px) {
+  .cardPerguntas {
+    width: 80vw;
+  }
+
+  .opcoes {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+}

@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 0.65rem;
 }
 
 .titleAluno {
@@ -31,7 +31,7 @@
 .btnsVerificarAluno {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .btnNao {
@@ -55,4 +55,65 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .cardVerificarAluno {
+    width: 80vw;
+  }
+
+  .btnsVerificarAluno {
+    gap: 5rem;
+  }
+
+  .btnNao,
+  .btnSim {
+    width: 19.5vw;
+    font-size: 1.7rem;
+  }
+
+  .confirmarAluno {
+    gap: 8rem;
+  }
+
+  .titleAluno {
+    font-size: 3.5rem;
+  }
+
+  .nomeAluno {
+    font-size: 3rem;
+  }
+
+  .telaVerificarAluno {
+    background-image: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleAluno {
+    font-size: 2.5rem;
+  }
+
+  .nomeAluno {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .confirmarAluno {
+    gap: 2.5rem;
+  }
+
+  .btnsVerificarAluno {
+    gap: 2.5rem;
+  }
+
+  .btnNao,
+  .btnSim {
+    width: 25vw;
+    font-size: 1.5rem;
+  }
+
+  .telaVerificarAluno {
+    background-image: none;
+  }
 }

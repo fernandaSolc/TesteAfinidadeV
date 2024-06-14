@@ -11,3 +11,12 @@
   justify-content: space-evenly;
   /* align-items: center; */
 }
+
+@media (max-width: 1024px) {
+  .cardPerguntas {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 480px) {
+}
