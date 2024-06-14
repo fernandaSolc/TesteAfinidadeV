@@ -54,3 +54,89 @@ form {
 .input-field select:focus {
   border: 2px solid #ab96bd;
 }
+
+@media (max-width: 1023px) {
+  #titleInterno1,
+  #titleInterno2 {
+    font-size: 3rem;
+  }
+
+  .cardPrincipal {
+    width: 80vw;
+    height: 60vh;
+    gap: 3rem;
+  }
+
+  .telaPrincipal {
+    height: 100vh;
+    background-repeat: no-repeat;
+    gap: 2rem;
+  }
+
+  .logoTelaInicial {
+    width: 40vw;
+  }
+
+  .input-field input {
+    width: 50vw;
+    font-size: 1.9rem;
+    border-radius: 2rem;
+  }
+
+  .btnIniciarQuiz {
+    margin-top: 2.5rem;
+  }
+
+  .iniciarQuiz {
+    width: 45vw;
+    font-size: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .form {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #titleInterno1,
+  #titleInterno2 {
+    font-size: 2rem;
+  }
+
+  .cardPrincipal {
+    width: 80vw;
+    height: 60vh;
+    gap: 2rem;
+  }
+
+  .telaPrincipal {
+    background-image: none;
+    background-color: #eed8ff;
+    gap: 2.5rem;
+  }
+
+  .logoTelaInicial {
+    width: 32.5vw;
+  }
+
+  .input-field input {
+    width: 50vw;
+    font-size: 1.2rem;
+  }
+
+  .btnIniciarQuiz {
+    margin-top: 1.8rem;
+  }
+
+  .iniciarQuiz {
+    width: 50vw;
+    height: 8vh;
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .form {
+    height: 28vh;
+  }
+}

@@ -3,8 +3,8 @@ import './Logo.css';
 
 const Logo = () => {
   return (
-    <div>
-      <img src={LogoPD} alt='Início do Quiz' />
+    <div className='logoPD'>
+      <img src={LogoPD} alt='Início do Quiz' className='logoTelaInicial' />
     </div>
   );
 };

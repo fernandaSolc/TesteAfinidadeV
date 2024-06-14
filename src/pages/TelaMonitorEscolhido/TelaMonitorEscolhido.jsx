@@ -63,11 +63,11 @@ const TelaMonitorEscolhido = () => {
             <BiLogoGmail className='icon gmail' />
             <h2 className='texto'>
               <a
-                href={`mailto:${monitor.email}`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${monitor.email}`}
                 target='_blank'
                 className='links'
               >
-                Converse
+                Converse com o monitor
               </a>
             </h2>
           </div>
