@@ -17,7 +17,9 @@ const TelaMonitorEscolhido = () => {
     return (
       <div className='cardMonitorEscolhido'>
         <Logo />
-        <div className='notFound'>Monitor não encontrado</div>
+        <div className='notFound'>
+          <h2 className='agentNotFound'>Monitor não encontrado</h2>
+        </div>
         <button className='backButton' onClick={() => navigate('/')}>
           Voltar à Tela Inicial
         </button>

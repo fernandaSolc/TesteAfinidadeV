@@ -54,7 +54,7 @@
   padding: 0;
 }
 
-.notFound {
+.agentNotFound {
   color: #6a408a;
   font-size: 1.9rem;
 }
@@ -156,5 +156,9 @@
 
   .links {
     font-size: 1.2rem;
+  }
+
+  .agentNotFound {
+    text-align: center;
   }
 }

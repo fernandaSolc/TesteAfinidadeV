@@ -5,6 +5,20 @@
   align-items: center;
 }
 
+.botaoAnterior {
+  background-color: #f8eeff;
+  color: #3a3a3a;
+  border: none;
+  cursor: pointer;
+}
+
+.botaoProxima {
+  background-color: #c994c9;
+  color: #4d2a4c;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .cardPerguntas {
     width: 80vw;
