@@ -12,10 +12,13 @@
 .titleAluno {
   display: flex;
   justify-content: center;
+  color: #81649a;
 }
 
-.pipipiAluno {
+.nomeAluno {
   text-align: center;
+  color: #82639a;
+  font-weight: 600;
 }
 
 .btnsVerificarAluno {
@@ -25,7 +28,7 @@
 }
 
 .btnNao {
-  width: 5vw;
+  width: 8vw;
   background-color: #f8eeff;
   color: #3a3a3a;
   border: 1px solid #f8eeff;
@@ -35,7 +38,7 @@
 }
 
 .btnSim {
-  width: 5vw;
+  width: 8vw;
   height: 5vh;
   background-color: #c994c9;
   color: #4d2a4c;

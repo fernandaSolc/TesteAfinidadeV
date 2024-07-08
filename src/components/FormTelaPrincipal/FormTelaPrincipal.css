@@ -1,28 +1,49 @@
-form {
+/* FormTelaPrincipal.css */
+.form {
+  display: flex;
+  height: 30vh;
+  background-color: #eed8ff;
+}
+
+.form2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.iniciarQuiz {
+  width: 15vw;
+  height: 9vh;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #c57cc4;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.input-field input {
-  width: 20.5vw;
-  height: 7.5vh;
-  border-radius: 1.125rem;
-  border: none;
-  font-size: 1.1rem;
-  padding: 0 1rem;
-  margin-top: 1rem;
-  outline: none;
-}
-.input-field select {
-  width: 23.05vw;
-  height: 7vh;
-  margin: 1rem 0;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  outline: none;
-  padding: 0 0.5rem;
-  border: 2px solid #e7cdfc;
+.iniciarQuiz:hover {
+  background-color: #c75cea;
 }
 
-.input-field select:focus {
-  border: 2px solid #ab96bd;
+/* TelaVerificarAluno.css */
+.telaVerificarAluno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eed8ff;
+}
+
+.titleAluno,
+.pipipiAluno {
+  margin: 10px 0;
 }

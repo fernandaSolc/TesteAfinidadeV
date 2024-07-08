@@ -4,25 +4,9 @@ import './FormTelaPrincipal.css';
 import axios from 'axios';
 
 const FormTelaPrincipal = ({ registrationCode, setregistrationCode, turno, setTurno }) => {
-// Função de debounce (não será usada neste exemplo, mas mantida para referência futura)
-function debounce(func, wait) {
-  let timeout;
-
-  return function (...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-const HomePage = ({ onSave, onSnackbarMessage }) => {
-  const [registrationCode, setregistrationCode] = useState("");
+const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
+  const [registrationCode, setregistrationCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [turno, setTurno] = useState("");
   const navigate = useNavigate();
 
   const handleStartQuiz = async () => {
@@ -34,12 +18,31 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
           },
         };
 
+        console.log(`Iniciando chamada API com registrationCode: ${registrationCode.toUpperCase()}`);
+        console.log(`Usando a chave da API: ${import.meta.   env.VITE_API_KEY}`);
+
+        const response = await axios.get(
+          `https://api-hml.pdcloud.dev/enrolled/matricula/${registrationCode.toUpperCase()}`,
+          config
+        );
+
         const data = response.data;
-        console.log('Nome do aluno:', data.nameCompleto); // Ajuste conforme o campo correto na resposta da API
-        navigate('/confirmacao');
+        console.log('Dados do aluno:', data);
+
+        // Salvando os dados do aluno
+        onSave({
+          name: data.nomeCompleto,
+          registrationCode: data.registrationCode,
+          preferredName: data.hasPreferredName === true ? data.preferredName : "",
+          hasPreferredName: data.hasPreferredName,
+          agenteDoSucesso: data.agenteDoSucesso,
+        });
+
+        // Navegar para a página de confirmação
+        navigate('/confirmacao', { state: { nomeCompleto: data.nomeCompleto } });
       } catch (error) {
-        console.error("Erro ao verificar registrationCode:", error);
-        let errorMessage = "Erro ao verificar matrícula";
+        console.error('Erro ao verificar registrationCode:', error);
+        let errorMessage = 'Erro ao verificar matrícula';
         if (
           axios.isAxiosError(error) &&
           error.response &&
@@ -48,12 +51,16 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
         ) {
           errorMessage += `: ${error.response.data.message}`;
         }
-        onSnackbarMessage(errorMessage); // Exibe uma mensagem de erro para o usuário
+        if (onSnackbarMessage) {
+          onSnackbarMessage(errorMessage); // Exibe uma mensagem de erro para o usuário
+        }
       } finally {
         setIsLoading(false);
       }
     } else {
-      onSnackbarMessage("Por favor, preencha todos os campos.");
+      if (onSnackbarMessage) {
+        onSnackbarMessage('Por favor, preencha todos os campos.');
+      }
     }
   };
 
@@ -69,20 +76,16 @@ const HomePage = ({ onSave, onSnackbarMessage }) => {
             onChange={e => setregistrationCode(e.target.value)}
           />
         </div>
-        <div className='input-field'>
-          <select
-            name='turno'
-            value={turno}
-            onChange={e => setTurno(e.target.value)}
+        <div className='btnIniciarQuiz'>
+          <button
+            className='iniciarQuiz'
+            type='button'
+            onClick={handleStartQuiz}
+            disabled={isLoading}
           >
-            <option value=''>Selecione o turno</option>
-            <option value='turno-manha'>De 09:00 às 15:00</option>
-            <option value='turno-noite'>De 15:00 às 21:00</option>
-          </select>
+            {isLoading ? 'Carregando...' : 'Iniciar Quiz'}
+          </button>
         </div>
-        <button className='iniciarQuiz' type='button' onClick={handleStartQuiz} disabled={isLoading}>
-          {isLoading ? 'Carregando...' : 'Iniciar Quiz'}
-        </button>
       </form>
     </div>
   );
