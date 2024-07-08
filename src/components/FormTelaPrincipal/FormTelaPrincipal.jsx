@@ -89,6 +89,6 @@ const FormTelaPrincipal = ({ onSave, onSnackbarMessage }) => {
       </form>
     </div>
   );
-};
+};}
 
 export default FormTelaPrincipal;
